@@ -47,10 +47,31 @@ section {
     flex-direction: column;
     justify-content: center;
 }
-
-section#home {
-    background-color: #e8f4f8;
+#contact {
+    background-color: #fff; /* Couleur de fond de la section */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
+
+.contact-container {
+    display: flex; /* Utiliser Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: flex-start; /* Alignement en haut */
+}
+
+.contact-info {
+    flex: 1; /* Laisser cette section prendre la place disponible */
+    margin-right: 20px; /* Espace à droite de la section d'infos */
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+
+
+
+/* Les autres styles restent inchangés */
+
 
 h1 {
     font-size: 2.5em;
@@ -66,13 +87,68 @@ ul {
     list-style-type: none;
     padding: 0;
 }
-
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    background-color: #333; /* Couleur de fond du pied de page */
+    color: white; /* Couleur du texte */
+    padding: 20px 0; /* Espacement autour du contenu */
+    width: 100%; /* Largeur complète de la page */
+    text-align: center; /* Centrer le contenu */
+    margin-top: 40px; /* Espacement au-dessus pour séparer le pied de page du reste */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center; /* Centre les icônes */
+    gap: 20px; /* Espace entre les icônes */
+    margin-top: 10px;
+}
+
+.contact-info a {
+    display: inline-block;
+    font-size: 2em; /* Taille des icônes */
+    text-decoration: none; /* Enlever la décoration des liens */
+    width: 50px; /* Largeur du conteneur */
+    height: 50px; /* Hauteur du conteneur */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Encadre les icônes en cercle */
+    border: 2px solid transparent; /* Bordure transparente par défaut */
+    transition: all 0.3s ease; /* Transition pour un effet au survol */
+}
+
+.contact-info i {
+    transition: color 0.3s ease; /* Transition pour la couleur au survol */
+}
+
+/* Couleurs spécifiques pour chaque icône */
+.contact-info a[href^="mailto:"] {
+    border-color: #D44638; /* Rouge pour l'email */
+    color: #D44638; /* Couleur de l'icône */
+}
+
+.contact-info a[href*="linkedin.com"] {
+    border-color: #0077B5; /* Bleu pour LinkedIn */
+    color: #0077B5; /* Couleur de l'icône */
+}
+
+.contact-info a[href*="github.com"] {
+    border-color: #000; /* Noir pour GitHub */
+    color: #000; /* Couleur de l'icône */
+}
+
+
+/* Couleurs spécifiques pour chaque icône */
+.contact-info a[href^="mailto:"]:hover {
+    background-color: #D44638; /* Fond rouge pour l'email */
+    color: white; /* L'icône devient blanche */
+}
+
+.contact-info a[href*="linkedin.com"]:hover {
+    background-color: #0077B5; /* Fond bleu pour LinkedIn */
+    color: white; /* L'icône devient blanche */
+}
+contact-info a[href*="github.com"]:hover {
+    background-color: #000; /* Fond noir pour GitHub */
+    color: white; /* L'icône devient blanche */
 }
