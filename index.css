@@ -112,7 +112,7 @@ section {
 
 .diploma i {
     font-size: 3em; /* Taille de l'icône */
-    color: #007bff; /* Couleur de l'icône */
+    color: #1c3f66; /* Couleur de l'icône */
     margin-bottom: 10px; /* Espacement sous l'icône */
 }
 
@@ -167,6 +167,8 @@ section {
 
 .skill i {
     font-size: 2.5em; /* Augmenter la taille des icônes */
+    color:#1c3f66; /* Changez cette couleur selon vos préférences */
+
 }
 
 
