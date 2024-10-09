@@ -4,19 +4,19 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f0f0f0;
     color: #333;
 }
 
 /* Navigation */
 header {
-    background-color: #333;
+    background-color: #142c48;
     color: #fff;
     padding: 10px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
+
 
 nav ul {
     list-style: none;
@@ -40,31 +40,40 @@ nav ul li a {
 section {
     padding: 40px;
     text-align: center;
-    background-color: #fff;
     border-radius: 8px;
     min-height: 100vh; /* Prend toute la hauteur de l'écran */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-#contact {
-    background-color: #fff; /* Couleur de fond de la section */
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+
+
+
+#about {
+    background-image: url('C:/Users/EBOUTIK/Desktop/PROJET/PORTFOLIO/background.jpg'); /* Chemin vers votre image */
+    background-size: cover; /* Couvrir tout l'espace disponible */
+    background-position: center; /* Centrer l'image */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    margin-top: -100px;
 }
 
-.contact-container {
-    display: flex; /* Utiliser Flexbox pour aligner les éléments */
-    justify-content: space-between; /* Espacement entre les éléments */
-    align-items: flex-start; /* Alignement en haut */
+#about h1 {
+    font-family: 'Dancing Script', cursive; /* Appliquer la police cursive */
+    font-size: 7em; /* Taille du texte pour le titre principal */
+    font-weight: bold; /* Rendre le texte en gras */
+    margin-bottom: 20px; /* Espacement sous le titre principal */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour le titre principal */
 }
 
-.contact-info {
-    flex: 1; /* Laisser cette section prendre la place disponible */
-    margin-right: 20px; /* Espace à droite de la section d'infos */
-    text-align: left; /* Aligner le texte à gauche */
+
+#about p {
+    font-size: 1.2em; /* Taille du texte pour le paragraphe */
+    max-width: 600px; /* Largeur maximum du paragraphe */
+    margin: 0 auto; /* Centrer le paragraphe */
+    line-height: 1.5; /* Espacement entre les lignes */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre portée pour le paragraphe */ 
+    color: rgb(115, 63, 43);
 }
 
 
@@ -73,9 +82,11 @@ section {
 /* Les autres styles restent inchangés */
 
 
-h1 {
-    font-size: 2.5em;
+ h1 {
+ top: 90px;
+    font-size: 5em;
     margin-bottom: 10px;
+    color:#142c48
 }
 
 h2 {
@@ -88,23 +99,24 @@ ul {
     padding: 0;
 }
 footer {
-    background-color: #333; /* Couleur de fond du pied de page */
     color: white; /* Couleur du texte */
     padding: 20px 0; /* Espacement autour du contenu */
-    width: 100%; /* Largeur complète de la page */
     text-align: center; /* Centrer le contenu */
-    margin-top: 40px; /* Espacement au-dessus pour séparer le pied de page du reste */
+    display: flex; /* Utiliser Flexbox */
+    flex-direction: column; /* Aligner les éléments en colonne */
+    justify-content: center; /* Centrer verticalement */
+    align-items: center; /* Centrer horizontalement */
+    width: 100%; /* Prendre toute la largeur */
+    height: 100vh; /* Prendre toute la hauteur de la page */
 }
 
 .contact-container {
-    display: flex;
+    display: flex; /* Utiliser flexbox pour le centrage */
     justify-content: center; /* Centre les icônes */
-    gap: 20px; /* Espace entre les icônes */
     margin-top: 10px;
 }
 
 .contact-info a {
-    display: inline-block;
     font-size: 2em; /* Taille des icônes */
     text-decoration: none; /* Enlever la décoration des liens */
     width: 50px; /* Largeur du conteneur */
@@ -148,7 +160,7 @@ footer {
     background-color: #0077B5; /* Fond bleu pour LinkedIn */
     color: white; /* L'icône devient blanche */
 }
-contact-info a[href*="github.com"]:hover {
+.contact-info a[href*="github.com"]:hover {
     background-color: #000; /* Fond noir pour GitHub */
     color: white; /* L'icône devient blanche */
 }
