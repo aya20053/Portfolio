@@ -79,32 +79,43 @@ section {
 
 
 
-
 #formation {
-    background-color: #f5f5f5; /* Couleur de fond de la section */
+    background-color: #282c34; /* Couleur de fond sombre */
     padding: 50px 20px; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
+    color: #f8f9fa; /* Couleur du texte clair */
 }
 
 #formation h2 {
     font-size: 2.5em; /* Taille du titre de la section */
     margin-bottom: 30px; /* Espacement sous le titre */
-    color: #333; /* Couleur du texte */
+    color: #61dafb; /* Couleur vives pour le titre */
 }
 
 .diploma {
-    background: white; /* Couleur de fond pour chaque diplôme */
+    background: rgba(255, 255, 255, 0.9); /* Couleur de fond blanche avec transparence */
     border-radius: 10px; /* Coins arrondis */
     padding: 20px; /* Espacement interne */
     margin: 20px auto; /* Espacement externe */
     max-width: 600px; /* Largeur maximum */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour les cartes */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre pour les cartes */
+    transition: transform 0.3s ease; /* Transition pour l'effet au survol */
+}
+
+.diploma:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+.diploma i {
+    font-size: 3em; /* Taille de l'icône */
+    color: #61dafb; /* Couleur de l'icône */
+    margin-bottom: 10px; /* Espacement sous l'icône */
 }
 
 .diploma h3 {
     font-size: 1.8em; /* Taille du titre du diplôme */
     margin-bottom: 10px; /* Espacement sous le titre */
-    color: #007BFF; /* Couleur du titre */
+    color: #333; /* Couleur du titre */
 }
 
 .diploma p {
@@ -112,8 +123,6 @@ section {
     color: #555; /* Couleur du texte */
     line-height: 1.5; /* Espacement entre les lignes */
 }
-
-
 
 
 
