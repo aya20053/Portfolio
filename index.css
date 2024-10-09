@@ -50,7 +50,7 @@ section {
 
 
 #about {
-    background-image: url('C:/Users/EBOUTIK/Desktop/PROJET/PORTFOLIO/background.jpg'); /* Chemin vers votre image */
+    background-image: url('photos/background.jpg'); /* Chemin vers votre image */
     background-size: cover; /* Couvrir tout l'espace disponible */
     background-position: center; /* Centrer l'image */
     color: white; /* Couleur du texte */
