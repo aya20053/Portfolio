@@ -171,130 +171,56 @@ section {
 
 }
 
-
-
-
-
-
-#projects {
-    padding: 50px 0; /* Espacement supérieur et inférieur */
-    background-color: #f4f4f4; /* Couleur de fond pour la section */
-}
-
 .projects-container {
-    display: flex; /* Utiliser flexbox pour l'alignement */
-    flex-direction: column; /* Disposition en colonne */
-    align-items: center; /* Centre les éléments */
+    display: flex; /* Utilise Flexbox pour la mise en page */
+    flex-wrap: wrap; /* Permet aux projets de se déplacer à la ligne */
+    justify-content: space-between; /* Espace entre les projets */
+    max-width: 1200px; /* Limite la largeur maximale du conteneur */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 0 20px; /* Ajoute un peu d'espacement latéral */
 }
 
 .project {
-    background-color: white; /* Couleur de fond des cartes */
-    border: 1px solid #ddd; /* Bordure légère */
+    flex: 0 1 calc(40% - 20px); /* Chaque projet prendra environ 50% de la largeur moins un espace */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour donner du relief */
     border-radius: 8px; /* Coins arrondis */
-    padding: 20px; /* Espacement à l'intérieur des cartes */
-    margin: 10px; /* Espacement entre les cartes */
-    width: 90%; /* Largeur des cartes */
-    max-width: 600px; /* Largeur maximale des cartes */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    transition: transform 0.2s; /* Transition pour l'effet d'agrandissement */
+    padding: 20px; /* Espacement interne */
+    margin-bottom: 20px; /* Espacement en bas */
+    background-color: #f9f9f9; /* Couleur de fond */
 }
 
-.project:hover {
-    transform: scale(1.02); /* Effet d'agrandissement au survol */
-}
-
-.project h3 {
-    color: #333; /* Couleur du titre */
-    margin-bottom: 10px; /* Espacement en dessous du titre */
-}
-
-.project p {
-    color: #555; /* Couleur du texte */
-    line-height: 1.6; /* Espacement des lignes */
-}
-
-
-
-
- h1 {
- top: 90px;
-    font-size: 5em;
-    margin-bottom: 10px;
-    color:#142c48
-}
-
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-footer {
-    color: white; /* Couleur du texte */
-    padding: 20px 0; /* Espacement autour du contenu */
-    text-align: center; /* Centrer le contenu */
-    display: flex; /* Utiliser Flexbox */
-    flex-direction: column; /* Aligner les éléments en colonne */
-    justify-content: center; /* Centrer verticalement */
-    align-items: center; /* Centrer horizontalement */
-    width: 100%; /* Prendre toute la largeur */
-    height: 100vh; /* Prendre toute la hauteur de la page */
+.project-logo {
+    font-size: 2em; /* Taille de l'icône */
+      color:#1c3f66; /* Couleur de l'icône */
+    margin-bottom: 10px; /* Espacement entre l'icône et le texte */
 }
 
 .contact-container {
-    display: flex; /* Utiliser flexbox pour le centrage */
-    justify-content: center; /* Centre les icônes */
-    margin-top: 10px;
+    display: flex; /* Utiliser Flexbox pour aligner les icônes */
+    justify-content: center; /* Centrer les icônes horizontalement */
+    margin-top: 10px; /* Espacement en haut */
 }
 
 .contact-info a {
     font-size: 2em; /* Taille des icônes */
-    text-decoration: none; /* Enlever la décoration des liens */
-    width: 50px; /* Largeur du conteneur */
-    height: 50px; /* Hauteur du conteneur */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%; /* Encadre les icônes en cercle */
+    text-decoration: none; /* Supprimer la décoration des liens */
+    width: 60px; /* Largeur du conteneur */
+    height: 60px; /* Hauteur du conteneur */
+    display: flex; /* Utiliser Flexbox pour centrer l'icône */
+    align-items: center; /* Aligner verticalement */
+    justify-content: center; /* Aligner horizontalement */
+    border-radius: 50%; /* Coins arrondis pour un cercle */
     border: 2px solid transparent; /* Bordure transparente par défaut */
-    transition: all 0.3s ease; /* Transition pour un effet au survol */
+    transition: all 0.3s ease; /* Transition pour l'effet au survol */
+    margin: 0 10px; /* Espacement entre les icônes */
+    background-color: #f0f0f0; /* Couleur de fond des icônes */
+}
+
+.contact-info a:hover {
+    border: 2px solid #333; /* Bordure au survol */
+    background-color: #e0e0e0; /* Couleur de fond au survol */
 }
 
 .contact-info i {
     transition: color 0.3s ease; /* Transition pour la couleur au survol */
-}
-
-/* Couleurs spécifiques pour chaque icône */
-.contact-info a[href^="mailto:"] {
-    border-color: #D44638; /* Rouge pour l'email */
-    color: #D44638; /* Couleur de l'icône */
-}
-
-.contact-info a[href*="linkedin.com"] {
-    border-color: #0077B5; /* Bleu pour LinkedIn */
-    color: #0077B5; /* Couleur de l'icône */
-}
-
-.contact-info a[href*="github.com"] {
-    border-color: #000; /* Noir pour GitHub */
-    color: #000; /* Couleur de l'icône */
-}
-
-
-/* Couleurs spécifiques pour chaque icône */
-.contact-info a[href^="mailto:"]:hover {
-    background-color: #D44638; /* Fond rouge pour l'email */
-    color: white; /* L'icône devient blanche */
-}
-
-.contact-info a[href*="linkedin.com"]:hover {
-    background-color: #0077B5; /* Fond bleu pour LinkedIn */
-    color: white; /* L'icône devient blanche */
-}
-.contact-info a[href*="github.com"]:hover {
-    background-color: #000; /* Fond noir pour GitHub */
-    color: white; /* L'icône devient blanche */
 }
