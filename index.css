@@ -176,7 +176,44 @@ section {
 
 
 
-/* Les autres styles restent inchangés */
+#projects {
+    padding: 50px 0; /* Espacement supérieur et inférieur */
+    background-color: #f4f4f4; /* Couleur de fond pour la section */
+}
+
+.projects-container {
+    display: flex; /* Utiliser flexbox pour l'alignement */
+    flex-direction: column; /* Disposition en colonne */
+    align-items: center; /* Centre les éléments */
+}
+
+.project {
+    background-color: white; /* Couleur de fond des cartes */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px; /* Espacement à l'intérieur des cartes */
+    margin: 10px; /* Espacement entre les cartes */
+    width: 90%; /* Largeur des cartes */
+    max-width: 600px; /* Largeur maximale des cartes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.2s; /* Transition pour l'effet d'agrandissement */
+}
+
+.project:hover {
+    transform: scale(1.02); /* Effet d'agrandissement au survol */
+}
+
+.project h3 {
+    color: #333; /* Couleur du titre */
+    margin-bottom: 10px; /* Espacement en dessous du titre */
+}
+
+.project p {
+    color: #555; /* Couleur du texte */
+    line-height: 1.6; /* Espacement des lignes */
+}
+
+
 
 
  h1 {
