@@ -77,52 +77,104 @@ section {
 }
 
 
-
-
 #formation {
-    background-color: #282c34; /* Couleur de fond sombre */
+    background-color: #f0f8ff; /* Couleur de fond légère */
     padding: 50px 20px; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
-    color: #f8f9fa; /* Couleur du texte clair */
 }
 
 #formation h2 {
     font-size: 2.5em; /* Taille du titre de la section */
     margin-bottom: 30px; /* Espacement sous le titre */
-    color: #61dafb; /* Couleur vives pour le titre */
+    color: #333; /* Couleur du texte sombre */
+}
+
+.diplomas {
+    display: flex; /* Affichage en flex pour aligner les cartes */
+    justify-content: center; /* Centrer les cartes horizontalement */
+    flex-wrap: wrap; /* Permettre le passage à la ligne des cartes */
+    gap: 30px; /* Espacement entre les cartes */
 }
 
 .diploma {
-    background: rgba(255, 255, 255, 0.9); /* Couleur de fond blanche avec transparence */
+    background: white; /* Couleur de fond blanche */
     border-radius: 10px; /* Coins arrondis */
-    padding: 20px; /* Espacement interne */
-    margin: 20px auto; /* Espacement externe */
-    max-width: 600px; /* Largeur maximum */
+    padding: 30px; /* Espacement interne */
+    max-width: 250px; /* Largeur maximum pour chaque carte */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre pour les cartes */
-    transition: transform 0.3s ease; /* Transition pour l'effet au survol */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'effet au survol */
 }
 
 .diploma:hover {
-    transform: translateY(-5px); /* Légère élévation au survol */
+    transform: translateY(-10px); /* Légère élévation au survol */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Ombre plus forte au survol */
 }
 
 .diploma i {
     font-size: 3em; /* Taille de l'icône */
-    color: #61dafb; /* Couleur de l'icône */
+    color: #007bff; /* Couleur de l'icône */
     margin-bottom: 10px; /* Espacement sous l'icône */
 }
 
 .diploma h3 {
-    font-size: 1.8em; /* Taille du titre du diplôme */
+    font-size: 1.5em; /* Taille du titre du diplôme */
     margin-bottom: 10px; /* Espacement sous le titre */
     color: #333; /* Couleur du titre */
 }
 
 .diploma p {
-    font-size: 1.2em; /* Taille du texte pour le paragraphe */
+    font-size: 1em; /* Taille du texte pour le paragraphe */
     color: #555; /* Couleur du texte */
     line-height: 1.5; /* Espacement entre les lignes */
+    text-align: left; /* Aligner le texte à gauche */
 }
+
+
+#competance {
+    background-color: #f9f9f9; /* Couleur de fond légèrement plus claire */
+    padding: 50px 20px; /* Espacement autour du contenu */
+    text-align: center; /* Centrer le texte */
+}
+
+#competance h2 {
+    font-size: 2.5em; /* Taille du titre de la section */
+    margin-bottom: 30px; /* Espacement sous le titre */
+    color: #333; /* Couleur du texte sombre */
+}
+
+.skills-container {
+    display: flex; /* Affichage en flex pour aligner les compétences */
+    flex-wrap: wrap; /* Permettre le passage à la ligne */
+    justify-content: center; /* Centrer les compétences */
+    gap: 20px; /* Espacement entre les compétences */
+}
+
+.skill {
+    background: white; /* Couleur de fond blanche pour les compétences */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    max-width: 150px; /* Largeur maximum pour chaque compétence */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour les compétences */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'effet au survol */
+}
+
+.skill:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus forte au survol */
+}
+
+.skill i {
+    font-size: 2em; /* Taille de l'icône */
+    color: #007bff; /* Couleur de l'icône */
+    margin-bottom: 10px; /* Espacement sous l'icône */
+}
+
+.skill {
+    font-size: 1.2em; /* Taille du texte pour la compétence */
+    color: #555; /* Couleur du texte */
+}
+
+
 
 
 
