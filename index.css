@@ -141,38 +141,34 @@ section {
     margin-bottom: 30px; /* Espacement sous le titre */
     color: #333; /* Couleur du texte sombre */
 }
-
 .skills-container {
-    display: flex; /* Affichage en flex pour aligner les compétences */
-    flex-wrap: wrap; /* Permettre le passage à la ligne */
-    justify-content: center; /* Centrer les compétences */
-    gap: 20px; /* Espacement entre les compétences */
+    display: flex; /* Utiliser flexbox pour l'alignement */
+    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
+    justify-content: center; /* Centrer les éléments horizontalement */
 }
 
 .skill {
-    background: white; /* Couleur de fond blanche pour les compétences */
-    border-radius: 10px; /* Coins arrondis */
-    padding: 20px; /* Espacement interne */
-    max-width: 150px; /* Largeur maximum pour chaque compétence */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour les compétences */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'effet au survol */
+    width: 180px; /* Augmenter la largeur pour chaque compétence */
+    height: 140px; /* Augmenter la hauteur pour chaque compétence */
+    display: flex; /* Utiliser flexbox pour centrer le contenu */
+    flex-direction: column; /* Orienter le contenu en colonne */
+    align-items: center; /* Centrer horizontalement */
+    justify-content: center; /* Centrer verticalement */
+    margin: 10px; /* Espacement autour de chaque compétence */
+    border: 1px solid #ccc; /* Optionnel : bordure pour délimiter les compétences */
+    border-radius: 8px; /* Optionnel : arrondir les coins */
+    background-color: #f9f9f9; /* Optionnel : couleur de fond */
+    transition: transform 0.2s; /* Animation pour l'effet de survol */
 }
 
 .skill:hover {
-    transform: translateY(-5px); /* Légère élévation au survol */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus forte au survol */
+    transform: scale(1.05); /* Effet d'agrandissement au survol */
 }
 
 .skill i {
-    font-size: 2em; /* Taille de l'icône */
-    color: #007bff; /* Couleur de l'icône */
-    margin-bottom: 10px; /* Espacement sous l'icône */
+    font-size: 2.5em; /* Augmenter la taille des icônes */
 }
 
-.skill {
-    font-size: 1.2em; /* Taille du texte pour la compétence */
-    color: #555; /* Couleur du texte */
-}
 
 
 
