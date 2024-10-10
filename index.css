@@ -56,13 +56,17 @@ section {
     color: #1c3f66; /* Couleur du texte */
     text-align: center; /* Centrer le texte */
     margin-top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #about h1 {
     font-family: 'Dancing Script', cursive; /* Appliquer la police cursive */
-    font-size: 7em; /* Taille du texte pour le titre principal */
+    font-size: 7rem; /* Taille du texte pour le titre principal */
     font-weight: bold; /* Rendre le texte en gras */
     margin-bottom: 20px; /* Espacement sous le titre principal */
+    font-optical-sizing: auto;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour le titre principal */
 }
 
