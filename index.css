@@ -21,7 +21,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     margin: 0;
     padding: 0;
 }
@@ -53,7 +53,7 @@ section {
     background-image: url('photos/background.jpg'); /* Chemin vers votre image */
     background-size: cover; /* Couvrir tout l'espace disponible */
     background-position: center; /* Centrer l'image */
-    color: white; /* Couleur du texte */
+    color: #1c3f66; /* Couleur du texte */
     text-align: center; /* Centrer le texte */
     margin-top: -100px;
 }
@@ -193,34 +193,60 @@ section {
     font-size: 2em; /* Taille de l'icône */
       color:#1c3f66; /* Couleur de l'icône */
     margin-bottom: 10px; /* Espacement entre l'icône et le texte */
-}
 
-.contact-container {
-    display: flex; /* Utiliser Flexbox pour aligner les icônes */
-    justify-content: center; /* Centrer les icônes horizontalement */
-    margin-top: 10px; /* Espacement en haut */
 }
-
-.contact-info a {
-    font-size: 2em; /* Taille des icônes */
-    text-decoration: none; /* Supprimer la décoration des liens */
-    width: 60px; /* Largeur du conteneur */
-    height: 60px; /* Hauteur du conteneur */
-    display: flex; /* Utiliser Flexbox pour centrer l'icône */
-    align-items: center; /* Aligner verticalement */
-    justify-content: center; /* Aligner horizontalement */
-    border-radius: 50%; /* Coins arrondis pour un cercle */
-    border: 2px solid transparent; /* Bordure transparente par défaut */
-    transition: all 0.3s ease; /* Transition pour l'effet au survol */
-    margin: 0 10px; /* Espacement entre les icônes */
-    background-color: #f0f0f0; /* Couleur de fond des icônes */
-}
-
-.contact-info a:hover {
-    border: 2px solid #333; /* Bordure au survol */
-    background-color: #e0e0e0; /* Couleur de fond au survol */
-}
-
-.contact-info i {
-    transition: color 0.3s ease; /* Transition pour la couleur au survol */
-}
+#contact {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  #contact h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Taille du cercle */
+    height:60px; /* Taille du cercle */
+    border-radius: 50%;
+    border: 3px solid ; /* Bordure initiale */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 2.5em; /* Taille de l'icône */
+  }
+  
+  .icon-box.email {
+    border-color: red;
+    color: RED;
+  }
+  
+  .icon-box.linkedin {
+    border-color: blue;
+    color: blue;
+  }
+  
+  .icon-box.github {
+    border-color: black;
+    color: black;
+  }
+  
+  
+  
+  .icon-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  

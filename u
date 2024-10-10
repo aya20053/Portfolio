@@ -21,7 +21,7 @@
 }
 
 .contact-info a:hover {
-    border: 2px solid #333; /* Bordure au survol */
+    border: 10px solid #228b3c; /* Bordure au survol */
     background-color: #e0e0e0; /* Couleur de fond au survol */
 }
 
