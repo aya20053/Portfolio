@@ -255,17 +255,4 @@ section {
   }
   
   /* Inverser les couleurs au survol */
-  .icon-box.email:hover i {
-    color: red; /* Icône devient rouge */
-    background-color: white; /* Fond devient blanc */
-  }
   
-  .icon-box.linkedin:hover i {
-    color: blue; /* Icône devient bleu */
-    background-color: white; /* Fond devient blanc */
-  }
-  
-  .icon-box.github:hover i {
-    color: black; /* Icône devient noire */
-    background-color: white; /* Fond devient blanc */
-  }
