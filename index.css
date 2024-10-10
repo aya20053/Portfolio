@@ -50,7 +50,7 @@ section {
 
 
 #about {
-    background-image: url('photos/background.jpg'); /* Chemin vers votre image */
+    background: url('photos/background.jpg') no-repeat center center ; /* Chemin vers votre image */
     background-size: cover; /* Couvrir tout l'espace disponible */
     background-position: center; /* Centrer l'image */
     color: #1c3f66; /* Couleur du texte */
@@ -250,3 +250,18 @@ section {
     background-color: rgba(0, 0, 0, 0.05);
   }
   
+  /* Inverser les couleurs au survol */
+  .icon-box.email:hover i {
+    color: red; /* Icône devient rouge */
+    background-color: white; /* Fond devient blanc */
+  }
+  
+  .icon-box.linkedin:hover i {
+    color: blue; /* Icône devient bleu */
+    background-color: white; /* Fond devient blanc */
+  }
+  
+  .icon-box.github:hover i {
+    color: black; /* Icône devient noire */
+    background-color: white; /* Fond devient blanc */
+  }
