@@ -6,6 +6,10 @@ body {
     line-height: 1.6;
     color: #333;
 }
+::selection{
+    background:#142c48;
+    color:lemonchiffon;
+}
 
 /* Navigation */
 header {
@@ -35,6 +39,8 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
+
+
 
 /* Sections */
 section {
@@ -76,13 +82,12 @@ section {
     max-width: 600px; /* Largeur maximum du paragraphe */
     margin: 0 auto; /* Centrer le paragraphe */
     line-height: 1.5; /* Espacement entre les lignes */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre portée pour le paragraphe */ 
+    text-shadow: 1px 1px 3px rgba(115,63, 43, 0.5); /* Ombre portée pour le paragraphe */ 
     color: rgb(115, 63, 43);
 }
 
 
 #formation {
-    background-color: #f0f8ff; /* Couleur de fond légère */
     padding: 50px 20px; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
 }
@@ -98,15 +103,14 @@ section {
     justify-content: center; /* Centrer les cartes horizontalement */
     flex-wrap: wrap; /* Permettre le passage à la ligne des cartes */
     gap: 30px; /* Espacement entre les cartes */
+   
 }
 
 .diploma {
-    background: white; /* Couleur de fond blanche */
+    background: #d6e2ef; /* Couleur de fond blanche */
     border-radius: 10px; /* Coins arrondis */
     padding: 30px; /* Espacement interne */
     max-width: 250px; /* Largeur maximum pour chaque carte */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre pour les cartes */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'effet au survol */
 }
 
 .diploma:hover {
@@ -128,14 +132,13 @@ section {
 
 .diploma p {
     font-size: 1em; /* Taille du texte pour le paragraphe */
-    color: #555; /* Couleur du texte */
+    color: #111010; /* Couleur du texte */
     line-height: 1.5; /* Espacement entre les lignes */
     text-align: left; /* Aligner le texte à gauche */
 }
 
 
 #competance {
-    background-color: #f9f9f9; /* Couleur de fond légèrement plus claire */
     padding: 50px 20px; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
 }
@@ -161,17 +164,22 @@ section {
     margin: 10px; /* Espacement autour de chaque compétence */
     border: 1px solid #ccc; /* Optionnel : bordure pour délimiter les compétences */
     border-radius: 8px; /* Optionnel : arrondir les coins */
-    background-color: #f9f9f9; /* Optionnel : couleur de fond */
-    transition: transform 0.2s; /* Animation pour l'effet de survol */
+    background: #d6e2ef; /* Couleur de fond blanche */
 }
 
 .skill:hover {
-    transform: scale(1.05); /* Effet d'agrandissement au survol */
+    transform: translateY(-10px); /* Légère élévation au survol */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Ombre plus forte au survol */
 }
-
 .skill i {
     font-size: 2.5em; /* Augmenter la taille des icônes */
     color:#1c3f66; /* Changez cette couleur selon vos préférences */
+
+}
+#projects h2{
+    font-size: 2.5em; /* Taille du titre de la section */
+    margin-bottom: 30px; /* Espacement sous le titre */
+    color: #333; /* Couleur du texte sombre */
 
 }
 
@@ -190,7 +198,8 @@ section {
     border-radius: 8px; /* Coins arrondis */
     padding: 20px; /* Espacement interne */
     margin-bottom: 20px; /* Espacement en bas */
-    background-color: #f9f9f9; /* Couleur de fond */
+    background: #d6e2ef; /* Couleur de fond blanche */
+
 }
 
 .project-logo {
@@ -198,6 +207,10 @@ section {
       color:#1c3f66; /* Couleur de l'icône */
     margin-bottom: 10px; /* Espacement entre l'icône et le texte */
 
+}
+.project:hover {
+    transform: translateY(-10px); /* Légère élévation au survol */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Ombre plus forte au survol */
 }
 #contact {
     text-align: center;
@@ -208,9 +221,11 @@ section {
   }
   
   #contact h2 {
-    color: #333;
-    margin-bottom: 20px;
-  }
+    font-size: 2.5em; /* Taille du titre de la section */
+    margin-bottom: 30px; /* Espacement sous le titre */
+    color: #333; /* Couleur du texte sombre */
+
+}
   
   .icons {
     display: flex;
