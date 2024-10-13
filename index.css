@@ -12,18 +12,7 @@ body {
 }
 
 /* Navigation */
-header {
-    background-color: rgba(255, 255, 255, 0.9); /* Couleur avec transparence */
-    color: #fff;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
 
-
-}
 
 nav ul {
     list-style: none;
@@ -69,7 +58,6 @@ section {
     background-position: center; /* Centrer l'image */
     color: #acc9ea; /* Couleur du texte */
     text-align: center; /* Centrer le texte */
-    margin-top: -100px;
     display: flex;
     align-items: center;
     justify-content: center;
