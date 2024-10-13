@@ -7,26 +7,29 @@ body {
     color: #333;
 }
 ::selection{
-    background:#142c48;
+    background:rgb(20, 44, 72);
     color:lemonchiffon;
 }
 
 /* Navigation */
 header {
-    background-color: #142c48;
+    background-color: rgba(255, 255, 255, 0.9); /* Couleur avec transparence */
     color: #fff;
     padding: 10px;
     position: sticky;
     top: 0;
     z-index: 1000;
-}
+    display: flex;
+    justify-content: space-between;
 
+
+}
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: right;
-    margin: 0;
+    margin:10px;
     padding: 0;
 }
 
@@ -35,9 +38,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #142c48;
     text-decoration: none;
     font-weight: bold;
+}
+.logo {
+    width: 50px; /* Ajuste la taille selon tes préférences */
+    height: 50px; /* Assure-toi que la hauteur soit la même que la largeur */
+    border-radius: 50%; /* Crée un effet de cercle */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
 }
 
 
@@ -54,17 +63,17 @@ section {
 }
 
 
-
 #about {
-    background: url('photos/background.jpg') no-repeat center center ; /* Chemin vers votre image */
+    background: url('photos/background1.jfif') no-repeat center center ; /* Chemin vers votre image */
     background-size: cover; /* Couvrir tout l'espace disponible */
     background-position: center; /* Centrer l'image */
-    color: #1c3f66; /* Couleur du texte */
+    color: #acc9ea; /* Couleur du texte */
     text-align: center; /* Centrer le texte */
     margin-top: -100px;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 #about h1 {
@@ -83,7 +92,7 @@ section {
     margin: 0 auto; /* Centrer le paragraphe */
     line-height: 1.5; /* Espacement entre les lignes */
     text-shadow: 1px 1px 3px rgba(115,63, 43, 0.5); /* Ombre portée pour le paragraphe */ 
-    color: rgb(115, 63, 43);
+    color: rgb(177, 203, 236);
 }
 
 
@@ -269,5 +278,10 @@ section {
     background-color: rgba(0, 0, 0, 0.05);
   }
   
-  /* Inverser les couleurs au survol */
-  
+  #copy {
+    text-align: center;
+    margin-top: auto;
+    padding: 10px;
+    color:#1c3f66;
+    width: 100%;
+}
