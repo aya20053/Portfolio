@@ -85,8 +85,9 @@ section {
 
 
 #formation {
-    padding: 50px 20px; /* Espacement autour du contenu */
+    padding: 80px 20px; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
+  
 }
 
 #formation h2 {
@@ -99,15 +100,15 @@ section {
     display: flex; /* Affichage en flex pour aligner les cartes */
     justify-content: center; /* Centrer les cartes horizontalement */
     flex-wrap: wrap; /* Permettre le passage à la ligne des cartes */
-    gap: 30px; /* Espacement entre les cartes */
+    gap: 40px; /* Espacement entre les cartes */
    
 }
 
 .diploma {
     background: #d6e2ef; /* Couleur de fond blanche */
     border-radius: 10px; /* Coins arrondis */
-    padding: 30px; /* Espacement interne */
-    max-width: 250px; /* Largeur maximum pour chaque carte */
+    padding: 40px; /* Espacement interne */
+    max-width: 300px; /* Largeur maximum pour chaque carte */
 }
 
 .diploma:hover {
