@@ -49,6 +49,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 
@@ -56,7 +57,7 @@ section {
     background: url('photos/background1.jfif') no-repeat center center ; /* Chemin vers votre image */
     background-size: cover; /* Couvrir tout l'espace disponible */
     background-position: center; /* Centrer l'image */
-    color: #acc9ea; /* Couleur du texte */
+    color: rgb(172, 201, 234); /* Couleur du texte */
     text-align: center; /* Centrer le texte */
     display: flex;
     align-items: center;
@@ -70,7 +71,7 @@ section {
     font-weight: bold; /* Rendre le texte en gras */
     margin-bottom: 20px; /* Espacement sous le titre principal */
     font-optical-sizing: auto;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour le titre principal */
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour le titre principal */
 }
 
 
@@ -79,8 +80,8 @@ section {
     max-width: 600px; /* Largeur maximum du paragraphe */
     margin: 0 auto; /* Centrer le paragraphe */
     line-height: 1.5; /* Espacement entre les lignes */
-    text-shadow: 1px 1px 3px rgba(115,63, 43, 0.5); /* Ombre portée pour le paragraphe */ 
-    color: rgb(177, 203, 236);
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour le titre principal */
+    color: rgb(190, 209, 235);
 }
 
 
@@ -273,4 +274,21 @@ section {
     padding: 10px;
     color:#1c3f66;
     width: 100%;
+}
+
+.skill {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSkill 1s forwards;
+}
+
+@keyframes fadeInSkill {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
