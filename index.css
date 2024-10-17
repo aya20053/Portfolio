@@ -161,7 +161,7 @@ section {
     display: flex; /* Utiliser flexbox pour l'alignement */
     flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
     justify-content: center; /* Centrer les éléments horizontalement */
-   
+    gap: 20px;
 
 }
 .skill {
@@ -175,16 +175,77 @@ section {
     border: 1px solid #ccc; /* Optionnel : bordure pour délimiter les compétences */
     border-radius: 8px; /* Optionnel : arrondir les coins */
     background: #d6e2ef; /* Couleur de fond blanche */
+    transition: all 0.3s ease; /* Transition pour le survol */
 }
-
 
 
 .skill i {
     font-size: 2.5em; /* Augmenter la taille des icônes */
     color: #1c3f66; /* Changez cette couleur selon vos préférences */
 
-    
 }
+.skill {
+    position: relative; /* Nécessaire pour le positionnement absolu du trait */
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease; /* Transition pour le survol */
+}
+
+/* Trait en haut */
+.skill::before,
+.skill::after {
+    content: "";
+    position: absolute;
+    background-color: #333; /* Couleur des traits */
+    transition: all 0.3s ease;
+}
+
+/* Trait en haut */
+.skill::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Épaisseur du trait */
+    transform: scaleX(0); /* Invisible par défaut */
+}
+
+/* Trait à gauche */
+.skill::after {
+    top: 0;
+    left: 0;
+    width: 2px; /* Épaisseur du trait */
+    height: 100%;
+    transform: scaleY(0); /* Invisible par défaut */
+}
+
+/* Trait en bas */
+.skill::after {
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Épaisseur du trait */
+    height: 2px; /* Épaisseur du trait */
+    transform: scaleX(0); /* Invisible par défaut */
+}
+
+/* Trait à droite */
+.skill::after {
+    top: 0;
+    right: 0;
+    width: 2px; /* Épaisseur du trait */
+    height: 100%;
+    transform: scaleY(0); /* Invisible par défaut */
+}
+
+/* Affichage des traits lors du survol */
+.skill:hover::before,
+.skill:hover::after {
+    transform: scaleX(1); /* Affiche le trait en haut et en bas */
+}
+
+.skill:hover::after {
+    transform: scaleY(1); /* Affiche le trait à gauche et à droite */
+}
+
 #projects h2{
     font-size: 2.5em; /* Taille du titre de la section */
     margin-bottom: 30px; /* Espacement sous le titre */
@@ -199,6 +260,10 @@ section {
     max-width: 1200px; /* Limite la largeur maximale du conteneur */
     margin: 0 auto; /* Centre le conteneur horizontalement */
     padding: 0 20px; /* Ajoute un peu d'espacement latéral */
+  position: relative;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .project {
@@ -217,10 +282,10 @@ section {
     margin-bottom: 10px; /* Espacement entre l'icône et le texte */
 
 }
-.project:hover {
-    transform: translateY(-10px); /* Légère élévation au survol */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Ombre plus forte au survol */
-}
+
+
+
+
 #contact {
     display: flex; /* Utilise Flexbox pour la mise en page */
     max-width: 1200px; /* Limite la largeur maximale du conteneur */
