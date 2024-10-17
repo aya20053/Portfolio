@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Aya Aatfaoui</title>
-    <link rel="icon" type="image/png" href="photos\logo11.jpg">
+    <link rel="icon" type="image/png" href="photos\logo.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
@@ -57,7 +57,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#about">
-                    <img src="photos/logo11.jpg" alt="Logo" class="logo">
+                    <img src="photos/logo.jpg" alt="Logo" class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -88,7 +88,7 @@
     
     
     <section id="formation">
-        <h2>Formation</h2>
+        <h2  class="styled-title">Formation</h2>
         <div class="diplomas">
             <div class="diploma">
                 <i class="fas fa-user-graduate"></i> <!-- Icône pour le diplôme -->
@@ -111,7 +111,7 @@
     
 
     <section id="competence">
-        <h2>Compétences</h2>
+        <h2 class="styled-title">Compétences</h2>
         <div class="skills-container">
             <div class="skill"><i class="fas fa-code"></i><br> HTML, CSS, JavaScript</div>
             <div class="skill"><i class="fab fa-php"></i><br> PHP</div>
@@ -138,7 +138,7 @@
 
 
     <section id="projects">
-        <h2>Projets</h2>
+        <h2  class="styled-title">Projets</h2>
         <div class="projects-container">
             <div class="project">
                 <i class="fas fa-mobile-alt project-logo"></i> <!-- Icône pour le mobile -->
@@ -169,7 +169,7 @@
     
     
     <section id="contact">
-        <h2>Contactez-moi</h2>
+        <h2  class="styled-title-contact">Contactez-moi</h2>
         <p> Pour toute question ou information , n'hésitez pas à me contacter via les liens au dessous .</p>
         <div class="icons">
           <a href="mailto:ayaaatfaoui38@gmail.com" target="_blank" class="icon-box email">
@@ -185,6 +185,25 @@
         <p id="copy"> &copy;2024 Aatfaoui aya</p>
       </section>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
 
+    // Récupérer tous les liens de la navbar
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Fonction pour mettre à jour la classe active
+function setActiveLink() {
+    // Supprimer la classe active de tous les liens
+    navLinks.forEach(link => link.classList.remove('active'));
+    
+    // Ajouter la classe active à l'élément cliqué
+    this.classList.add('active');
+}
+
+// Ajouter un écouteur d'événement pour chaque lien
+navLinks.forEach(link => {
+    link.addEventListener('click', setActiveLink);
+});
+
+</script>
 </body>
 </html>

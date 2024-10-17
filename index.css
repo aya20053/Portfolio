@@ -31,15 +31,10 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
-
-
-
-/* Style de base pour les liens */
-.nav-link {
-    color: rgb(20, 44, 72);
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+    text-shadow: 2px 2px 5px rgb(172, 201, 234.3); /* Ajoute un ombrage */
 }
 
 
@@ -109,7 +104,6 @@ section {
 #formation h2 {
     font-size: 2.5em; /* Taille du titre de la section */
     margin-bottom: 30px; /* Espacement sous le titre */
-    color: #333; /* Couleur du texte sombre */
 }
 
 .diplomas {
@@ -160,8 +154,7 @@ section {
 #competance h2 {
     font-size: 2.5em; /* Taille du titre de la section */
     margin-bottom: 30px; /* Espacement sous le titre */
-    color: #333; /* Couleur du texte sombre */
-    margin-top: 100px;
+    margin-top: 120px;
 }
 .skills-container {
     display: flex; /* Utiliser flexbox pour l'alignement */
@@ -198,7 +191,6 @@ section {
 #projects h2{
     font-size: 2.5em; /* Taille du titre de la section */
     margin-bottom: 30px; /* Espacement sous le titre */
-    color: #333; /* Couleur du texte sombre */
     margin-top: 40px;
 
 }
@@ -233,20 +225,44 @@ section {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Ombre plus forte au survol */
 }
 #contact {
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  #contact h2 {
-    font-size: 2.5em; /* Taille du titre de la section */
-    margin-bottom: 30px; /* Espacement sous le titre */
-    color: #333; /* Couleur du texte sombre */
-    margin-top: 60px;
+    display: flex; /* Utilise Flexbox pour la mise en page */
+    max-width: 1200px; /* Limite la largeur maximale du conteneur */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 0 20px; /* Ajoute un peu d'espacement latéral */
+}
+
+  .styled-title-contact {
+    font-family: 'Dancing Script', cursive; /* Utiliser la même police manuscrite */
+    font-size: 2em; /* Taille de la police */
+    text-align: center; /* Centrer le texte */
+    position: relative; /* Nécessaire pour les lignes */
+    margin: 40px 0; /* Marge autour du titre */
+    margin-top: 90px;
+    color: #1c3f66; /* Couleur des lignes */
+
 
 }
+
+.styled-title-contact:before,
+.styled-title-contact:after {
+    content: ''; /* Nécessaire pour créer des éléments de ligne */
+    position: absolute;
+    top: 50%; /* Positionner verticalement au centre du titre */
+    width: 40%; /* Largeur des lignes */
+    height: 2px; /* Épaisseur des lignes */
+    background-color: #1c3f66; /* Couleur des lignes */
+}
+
+.styled-title-contact:before {
+    right: 50%; /* Aligner la ligne à gauche */
+    margin-right: 135px; /* Ajoute un espacement entre le texte et la ligne */
+}
+
+.styled-title-contact:after {
+    left: 50%; /* Aligner la ligne à droite */
+    margin-left: 135px; /* Ajoute un espacement entre le texte et la ligne */
+}
+
   
   .icons {
     display: flex;
@@ -296,4 +312,36 @@ section {
     padding: 10px;
     color:#1c3f66;
     width: 100%;
+}
+
+
+
+.styled-title {
+    font-family: 'Dancing Script', cursive; /* Utiliser une police manuscrite */
+    font-size: 2em; /* Taille de la police */
+    text-align: center; /* Centrer le texte */
+    position: relative; /* Nécessaire pour les lignes */
+    margin: 20px 0; /* Marge autour du titre */
+    margin-top: 30px;
+   color: #1c3f66; /* Couleur des lignes */
+
+}
+
+.styled-title:before,
+.styled-title:after {
+    content: ''; /* Nécessaire pour créer des éléments de ligne */
+    position: absolute;
+    top: 50%; /* Positionner verticalement au centre du titre */
+    width: 40%; /* Largeur des lignes */
+    height: 2px; /* Épaisseur des lignes */
+    background-color: #1c3f66; /* Couleur des lignes */
+}
+
+.styled-title:before {
+    left: 0; /* Positionne la ligne à gauche */
+    
+}
+
+.styled-title:after {
+    right: 0; /* Positionne la ligne à droite */
 }
