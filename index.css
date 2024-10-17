@@ -156,6 +156,7 @@ section {
     margin-bottom: 30px; /* Espacement sous le titre */
     margin-top: 120px;
 }
+
 .skills-container {
     display: flex; /* Utiliser flexbox pour l'alignement */
     flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
@@ -163,7 +164,6 @@ section {
    
 
 }
-
 .skill {
     width: 180px; /* Augmenter la largeur pour chaque compétence */
     height: 140px; /* Augmenter la hauteur pour chaque compétence */
@@ -175,17 +175,13 @@ section {
     border: 1px solid #ccc; /* Optionnel : bordure pour délimiter les compétences */
     border-radius: 8px; /* Optionnel : arrondir les coins */
     background: #d6e2ef; /* Couleur de fond blanche */
-  
-
 }
 
-.skill:hover {
-    transform: translateY(-10px); /* Légère élévation au survol */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Ombre plus forte au survol */
-}
+
+
 .skill i {
     font-size: 2.5em; /* Augmenter la taille des icônes */
-    color:#1c3f66; /* Changez cette couleur selon vos préférences */
+    color: #1c3f66; /* Changez cette couleur selon vos préférences */
 
 }
 #projects h2{
