@@ -54,7 +54,7 @@ section {
 
 
 #about {
-    background: url('photos/background1.jfif') no-repeat center center ; /* Chemin vers votre image */
+    background: url('photos/background.jfif') no-repeat center center ; /* Chemin vers votre image */
     background-size: cover; /* Couvrir tout l'espace disponible */
     background-position: center; /* Centrer l'image */
     color: rgb(172, 201, 234); /* Couleur du texte */
@@ -274,21 +274,4 @@ section {
     padding: 10px;
     color:#1c3f66;
     width: 100%;
-}
-
-.skill {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInSkill 1s forwards;
-}
-
-@keyframes fadeInSkill {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }

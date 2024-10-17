@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Aya Aatfaoui</title>
-    <link rel="icon" type="image/png" href="photos\logo1.jpg">
+    <link rel="icon" type="image/png" href="photos\logo11.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
@@ -185,37 +185,5 @@
       </section>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-   <script> 
-    document.addEventListener("DOMContentLoaded", function () {
-    const skillsContainer = document.querySelector('.skills-container');
-    const skills = document.querySelectorAll('.skill');
-
-    // Créer un observateur pour surveiller l'entrée de la section dans la vue
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Si la section est visible, déclenche les animations
-                skills.forEach((skill, index) => {
-                    skill.style.opacity = '0';
-                    skill.style.animation = 'none';
-                    
-                    // Forcer un reflow pour réinitialiser l'animation
-                    skill.offsetHeight; // Lecture de l'offsetHeight force un reflow
-
-                    skill.style.animation = `fadeInSkill 2.8s forwards`;
-                    skill.style.animationDelay = `${0.2 * (index + 1)}s`;
-                });
-
-                // On arrête d'observer après que l'animation a été déclenchée
-                observer.unobserve(skillsContainer);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    // Observer la section des compétences
-    observer.observe(skillsContainer);
-});
-
-   </script>
 </body>
 </html>
