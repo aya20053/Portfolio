@@ -502,6 +502,7 @@ section {
     margin: 20px 0; /* Marge autour du titre */
     margin-top: 30px;
    color: #1c3f66; /* Couleur des lignes */
+   
 
 }
 
@@ -522,4 +523,63 @@ section {
 
 .styled-title:after {
     right: 0; /* Positionne la ligne à droite */
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Réduire la taille de la police pour les petits écrans */
+    }
+
+  
+    .logo {
+        width: 40px; /* Réduire la taille du logo */
+        height: 40px; /* Réduire la taille du logo */
+    }
+
+    section {
+        padding: 20px; /* Réduire l'espacement autour des sections */
+    }
+
+    #about h1 {
+        font-size: 4rem; /* Réduire la taille du titre */
+    }
+
+    .diplomas, .skills-container, .projects-container {
+        flex-direction: column; /* Aligner les cartes verticalement */
+        align-items: center; /* Centre les cartes */
+    }
+
+    .diploma, .skill, .project {
+        width: 100%; /* Utiliser toute la largeur de l'écran */
+        max-width: 90%; /* Limiter la largeur maximale */
+        margin: 10px 0; /* Espacement vertical */
+    }
+
+    #competance h2, #projects h2 {
+        font-size: 2em; /* Réduire la taille des titres des sections */
+    }
+
+    .icon-box {
+        width: 50px; /* Réduire la taille des icônes */
+        height: 50px; /* Réduire la taille des icônes */
+    }
+}
+
+/* Ajustements supplémentaires pour les très petits écrans */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Réduire davantage la taille de la police pour les très petits écrans */
+    }
+
+    #contact {
+        flex-direction: column; /* Aligner les éléments de contact en colonne */
+    }
+
+ 
+.styled-title:before,
+.styled-title:after {
+  
+    width: 20%; /* Largeur des lignes */
+}
 }
