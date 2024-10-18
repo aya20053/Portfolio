@@ -491,6 +491,22 @@ section {
     color:#1c3f66;
     width: 100%;
 }
+.btn-cv {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0077b5; /* Bleu similaire à LinkedIn */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-cv:hover {
+    background-color: #005582; /* Teinte plus foncée au survol */
+}
+
+
 
 
 
