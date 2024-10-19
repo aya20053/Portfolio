@@ -84,8 +84,12 @@ section {
     height: auto; /* Hauteur automatique */
     z-index: -1; /* Envoyer la vidéo derrière le contenu */
     transform: translate(-50%, -50%); /* Centrer la vidéo */
-}
 
+}
+#content{
+    margin-top: 200px;
+    background:rgba(0, 0, 9, 0.9);
+}
 #about h1 {
     font-family: 'Dancing Script', cursive; /* Appliquer la police cursive */
     font-size: 7rem; /* Taille du texte pour le titre principal */
@@ -610,4 +614,19 @@ section {
   
     width: 20%; /* Largeur des lignes */
 }
+}
+@media (max-width: 768px) {
+    #about {
+        height: auto; /* Permettre à la section de s'adapter à son contenu */
+        padding: 50px 20px; /* Ajoute du padding pour le confort */
+    }
+
+    #content {
+        margin-top: 100px; /* Réduire le margin-top pour les petits écrans */
+    }
+
+    #about h1 {
+        font-size: 4rem; /* Réduire la taille de police sur mobile */
+        margin-bottom: 10px; /* Réduire l'espacement sous le titre principal */
+    }
 }
