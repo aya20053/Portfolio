@@ -63,7 +63,6 @@ section {
 
 
 #about {
-    background: url('photos/background.jfif') no-repeat center center ; /* Chemin vers votre image */
     background-size: cover; /* Couvrir tout l'espace disponible */
     background-position: center; /* Centrer l'image */
     color: rgb(172, 201, 234); /* Couleur du texte */
@@ -71,7 +70,20 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Empêche le débordement */
 
+
+}
+.background-video {
+    position: absolute; /* Positionner la vidéo */
+    top: 50%; /* Centrer la vidéo verticalement */
+    left: 50%; /* Centrer la vidéo horizontalement */
+    min-width: 100%; /* S'assurer que la vidéo couvre toute la section */
+    min-height: 100%; /* S'assurer que la vidéo couvre toute la section */
+    width: auto; /* Largeur automatique */
+    height: auto; /* Hauteur automatique */
+    z-index: -1; /* Envoyer la vidéo derrière le contenu */
+    transform: translate(-50%, -50%); /* Centrer la vidéo */
 }
 
 #about h1 {
@@ -493,7 +505,7 @@ section {
 }
 .btn-cv {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 50px;
     padding: 10px 20px;
     background-color: #0077b5; /* Bleu similaire à LinkedIn */
     color: white;
