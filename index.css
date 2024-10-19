@@ -65,7 +65,7 @@ section {
 #about {
     background-size: cover; /* Couvrir tout l'espace disponible */
     background-position: center; /* Centrer l'image */
-    color: rgb(172, 201, 234); /* Couleur du texte */
+    color: #6dabf2; /* Couleur du texte */
     text-align: center; /* Centrer le texte */
     display: flex;
     align-items: center;
@@ -88,7 +88,7 @@ section {
 }
 #content{
     margin-top: 200px;
-    background:rgba(0, 0, 9, 0.9);
+    background:rgba(12, 22, 33, 0.9);
 }
 #about h1 {
     font-family: 'Dancing Script', cursive; /* Appliquer la police cursive */
@@ -106,7 +106,7 @@ section {
     margin: 0 auto; /* Centrer le paragraphe */
     line-height: 1.5; /* Espacement entre les lignes */
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour le titre principal */
-    color: rgb(190, 209, 235);
+    color: #2e89ef;
 }
 
 
@@ -629,4 +629,8 @@ section {
         font-size: 4rem; /* Réduire la taille de police sur mobile */
         margin-bottom: 10px; /* Réduire l'espacement sous le titre principal */
     }
+    .background-video {
+        max-width: 90%; /* Limiter la largeur maximale de la vidéo sur les tablettes */
+    }
+
 }
