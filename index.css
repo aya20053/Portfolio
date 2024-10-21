@@ -60,7 +60,7 @@ section {
    
     
 }
-
+/*acceuil*/
 
 #about {
     background-size: cover; /* Couvrir tout l'espace disponible */
@@ -109,7 +109,7 @@ section {
     color: #2e89ef;
 }
 
-
+/*formation*/
 #formation {
     padding: 80px 20px; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
@@ -220,7 +220,7 @@ section {
     transform: scaleY(1); /* Affiche le trait à gauche et à droite */
 }
 
-
+/*coùpetances*/
 #competance {
     padding: 50px 20px; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
@@ -320,7 +320,7 @@ section {
 .skill:hover::after {
     transform: scaleY(1); /* Affiche le trait à gauche et à droite */
 }
-
+/*projets*/
 #projects h2{
     font-size: 2.5em; /* Taille du titre de la section */
     margin-bottom: 30px; /* Espacement sous le titre */
@@ -414,7 +414,7 @@ section {
 }
 
 
-
+/*contact
 #contact {
     display: flex; /* Utilise Flexbox pour la mise en page */
     max-width: 1200px; /* Limite la largeur maximale du conteneur */
@@ -558,83 +558,181 @@ section {
 }
 
 
+/* sur le telephonne */
+
 @media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Réduire la taille de la police pour les petits écrans */
-    }
-
-  
-    .logo {
-        width: 40px; /* Réduire la taille du logo */
-        height: 40px; /* Réduire la taille du logo */
-    }
-
-    section {
-        padding: 20px; /* Réduire l'espacement autour des sections */
-    }
-
-    #about h1 {
-        font-size: 4rem; /* Réduire la taille du titre */
-    }
-
-    .diplomas, .skills-container, .projects-container {
-        flex-direction: column; /* Aligner les cartes verticalement */
-        align-items: center; /* Centre les cartes */
-    }
-
-    .diploma, .skill, .project {
-        width: 100%; /* Utiliser toute la largeur de l'écran */
-        max-width: 90%; /* Limiter la largeur maximale */
-        margin: 10px 0; /* Espacement vertical */
-    }
-
-    #competance h2, #projects h2 {
-        font-size: 2em; /* Réduire la taille des titres des sections */
-    }
-
-    .icon-box {
-        width: 50px; /* Réduire la taille des icônes */
-        height: 50px; /* Réduire la taille des icônes */
-    }
-}
-
-/* Ajustements supplémentaires pour les très petits écrans */
-@media (max-width: 480px) {
-    body {
-        font-size: 12px; /* Réduire davantage la taille de la police pour les très petits écrans */
-    }
-
-    #contact {
-        flex-direction: column; /* Aligner les éléments de contact en colonne */
-    }
-
- 
-.styled-title:before,
-.styled-title:after {
-  
-    width: 20%; /* Largeur des lignes */
-}
-}@media only screen and (max-width: 768px) {
     #about {
-        height: 100vh;
-        padding: 20px;
-    }
-
-    #content {
-        width: 90%;
-        padding: 15px;
-        font-size: 1rem; /* Ajuste la taille de la police pour le texte */
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1rem;
+        background-size: cover;
+        background-position: center;
+        color: #6dabf2;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        flex-direction: column; /* Stack items vertically */
     }
 
     .background-video {
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
         height: auto;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+    }
+
+    #content {
+        margin-top: 100px; /* Adjust for smaller screens */
+        background: rgba(12, 22, 33, 0.9);
+    }
+
+    #about h1 {
+        font-size: 3rem; /* Smaller font size for mobile */
+        margin-bottom: 10px;
+    }
+
+    #about p {
+        font-size: 1rem;
+        max-width: 90%; /* Make paragraph fill more of the screen */
+        line-height: 1.4;
+        color: #2e89ef;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #formation {
+        padding: 40px 10px; /* Adjust padding for mobile */
+    }
+
+    #formation h2 {
+        font-size: 1.5em; /* Smaller font size for mobile */
+        margin-bottom: 20px; /* Adjust spacing for mobile */
+    }
+
+    .diplomas {
+        flex-direction: column; /* Stack cards vertically on mobile */
+        align-items: center; /* Center align cards on mobile */
+    }
+
+    .diploma {
+        max-width: 90%; /* Make cards take up more screen width on mobile */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    .diploma h3 {
+        font-size: 1.2em; /* Adjust title size for mobile */
+        margin-bottom: 10px; /* Adjust spacing for mobile */
+    }
+
+    .diploma p {
+        font-size: 0.9em; /* Adjust text size for mobile */
+    }
+}
+
+
+@media (max-width: 768px) {
+    #competance {
+        padding: 20px 10px; /* Adjust padding for mobile */
+    }
+
+    #competance h2 {
+        font-size: 1.8em; /* Smaller font size for mobile */
+        margin-top: 80px; /* Reduce top margin for mobile */
+        margin-bottom: 20px; /* Adjust bottom margin for mobile */
+    }
+
+    .skills-container {
+        flex-direction: column; /* Stack skills vertically on mobile */
+        gap: 10px; /* Reduce gap between skills for mobile */
+    }
+
+    .skill {
+        width: 100%; /* Make skills take up full width on mobile */
+        height: auto; /* Adjust height to fit content */
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    .skill i {
+        font-size: 2em; /* Reduce icon size for mobile */
+    }
+
+    .skill h3 {
+        font-size: 1.2em; /* Adjust font size for mobile */
+    }
+
+    .skill p {
+        font-size: 1em; /* Adjust text size for mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    #projects h2 {
+        font-size: 1.8em; /* Smaller font size for mobile */
+        margin-top: 20px; /* Adjust top margin for mobile */
+        margin-bottom: 20px; /* Adjust bottom margin for mobile */
+    }
+
+    .projects-container {
+        flex-direction: column; /* Stack projects vertically on mobile */
+        padding: 0 10px; /* Reduce lateral padding for mobile */
+    }
+
+    .project {
+        flex: 0 1 100%; /* Make projects take full width on mobile */
+        margin-bottom: 15px; /* Adjust bottom margin for mobile */
+        padding: 15px; /* Adjust internal padding for mobile */
+    }
+
+    .project-logo {
+        font-size: 1.5em; /* Reduce icon size for mobile */
+        margin-bottom: 5px; /* Adjust spacing between icon and text */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    #contact {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        padding: 0 10px; /* Adjust lateral padding for mobile */
+    }
+
+    #con {
+        margin-top: 20px; /* Adjust top margin for mobile */
+    }
+
+    .styled-title-contact {
+        font-size: 1.5em; /* Adjust font size for mobile */
+        margin: 20px 0; /* Adjust margins for mobile */
+    }
+
+    .styled-title-contact:before,
+    .styled-title-contact:after {
+        width: 30%; /* Adjust line width for mobile */
+        margin-right: 85px; /* Adjust spacing for mobile */
+        margin-left: 85px; /* Adjust spacing for mobile */
+    }
+
+    .icons {
+        gap: 20px; /* Adjust gap for mobile */
+    }
+
+    .icon-box {
+        width: 50px; /* Adjust size for mobile */
+        height: 50px; /* Adjust size for mobile */
+        font-size: 2em; /* Adjust icon size for mobile */
+    }
+
+    #copy {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .btn-cv {
+        padding: 8px 16px; /* Adjust button padding for mobile */
+        font-size: 1em; /* Adjust font size for mobile */
     }
 }
