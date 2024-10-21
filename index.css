@@ -31,12 +31,18 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
-.nav-link.active,
+
 .nav-link:focus,
 .nav-link:hover {
     text-shadow: 2px 2px 5px rgb(172, 201, 234.3); /* Ajoute un ombrage */
 }
 
+
+
+.nav-item.active {
+    text-shadow: 2px 2px 5px rgb(172, 201, 234.3); /* Ajoute un ombrage */
+    transition: box-shadow 0.3s ease;
+}
 
 
 .logo {
@@ -63,33 +69,38 @@ section {
 /*acceuil*/
 
 #about {
-    background-size: cover; /* Couvrir tout l'espace disponible */
+    background-size: cover; /* L'image couvre toute la section */
     background-position: center; /* Centrer l'image */
-    color: #6dabf2; /* Couleur du texte */
-    text-align: center; /* Centrer le texte */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    height: 100vh; /* La section prend toute la hauteur de la fenêtre */
     display: flex;
-    align-items: center;
     justify-content: center;
-    overflow: hidden; /* Empêche le débordement */
-
-
-}
-.background-video {
-    position: absolute; /* Positionner la vidéo */
-    top: 50%; /* Centrer la vidéo verticalement */
-    left: 50%; /* Centrer la vidéo horizontalement */
-    min-width: 100%; /* S'assurer que la vidéo couvre toute la section */
-    min-height: 100%; /* S'assurer que la vidéo couvre toute la section */
-    width: auto; /* Largeur automatique */
-    height: auto; /* Hauteur automatique */
-    z-index: -1; /* Envoyer la vidéo derrière le contenu */
-    transform: translate(-50%, -50%); /* Centrer la vidéo */
+    align-items: center;
+    color: white; /* Optionnel : si tu veux du texte blanc sur l'image */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 
 }
-#content{
-    margin-top: 200px;
-    background:rgba(12, 22, 33, 0.9);
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 14, 28, 0.737); /* Couleur rouge avec transparence */
+    z-index: 1; /* Assurez-vous que la superposition est au-dessus de la vidéo */
 }
+#content {
+    margin-top: 90px;
+    color: rgb(109, 171, 242);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative; /* Pour que le contenu soit au-dessus de la vidéo */
+    z-index: 1; /* S'assurer que le contenu est au-dessus de la vidéo */
+    text-align: center; /* Centrer le texte */
+}
+
 #about h1 {
     font-family: 'Dancing Script', cursive; /* Appliquer la police cursive */
     font-size: 7rem; /* Taille du texte pour le titre principal */
@@ -98,7 +109,26 @@ section {
     font-optical-sizing: auto;
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour le titre principal */
 }
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Placer la vidéo derrière le contenu */
+    overflow: hidden;
+}
 
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 #about p {
     font-size: 1.2em; /* Taille du texte pour le paragraphe */
@@ -414,7 +444,7 @@ section {
 }
 
 
-/*contact
+/*contact*/
 #contact {
     display: flex; /* Utilise Flexbox pour la mise en page */
     max-width: 1200px; /* Limite la largeur maximale du conteneur */
@@ -573,16 +603,7 @@ section {
         flex-direction: column; /* Stack items vertically */
     }
 
-    .background-video {
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1;
-        transform: translate(-50%, -50%);
-    }
+    
 
     #content {
         margin-top: 100px; /* Adjust for smaller screens */
@@ -598,11 +619,16 @@ section {
         font-size: 1rem;
         max-width: 90%; /* Make paragraph fill more of the screen */
         line-height: 1.4;
-        color: #2e89ef;
+    }
+  .video-background video {
+        height: 100%; /* Garde la hauteur à 100% */
+        width: auto; /* Laisse la largeur s'ajuster automatiquement */
+        max-width: 50%; /* Limiter la largeur à 80% de l'écran (ajustez selon vos besoins) */
+        left: 50%; /* Centrer horizontalement */
+        transform: translate(-50%, -50%); /* Ajustement du centrage */
     }
 }
-
-
+  
 @media (max-width: 768px) {
     #formation {
         padding: 40px 10px; /* Adjust padding for mobile */
