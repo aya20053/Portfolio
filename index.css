@@ -614,21 +614,27 @@ section {
   
     width: 20%; /* Largeur des lignes */
 }
-}
-@media (max-width: 768px) {
+}@media only screen and (max-width: 768px) {
     #about {
-        height: auto; /* Permettre à la section de s'adapter à son contenu */
-        padding: 50px 20px; /* Ajoute du padding pour le confort */
+        height: 100vh;
+        padding: 20px;
     }
 
     #content {
-        margin-top: 100px; /* Réduire le margin-top pour les petits écrans */
+        width: 90%;
+        padding: 15px;
+        font-size: 1rem; /* Ajuste la taille de la police pour le texte */
     }
 
-    #about h1 {
-        font-size: 4rem; /* Réduire la taille de police sur mobile */
-        margin-bottom: 10px; /* Réduire l'espacement sous le titre principal */
+    h1 {
+        font-size: 1.5rem;
     }
-   
 
+    p {
+        font-size: 1rem;
+    }
+
+    .background-video {
+        height: auto;
+    }
 }
