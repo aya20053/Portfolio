@@ -511,7 +511,7 @@ section {
     display: inline-block;
     margin-top: 50px;
     padding: 10px 20px;
-    background-color: #0077b5; /* Bleu similaire à LinkedIn */
+    background-color: #1c3f66; /* Bleu similaire à LinkedIn */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -519,7 +519,7 @@ section {
 }
 
 .btn-cv:hover {
-    background-color: #005582; /* Teinte plus foncée au survol */
+    background-color: #08366b; /* Teinte plus foncée au survol */
 }
 
 
@@ -629,8 +629,6 @@ section {
         font-size: 4rem; /* Réduire la taille de police sur mobile */
         margin-bottom: 10px; /* Réduire l'espacement sous le titre principal */
     }
-    .background-video {
-        max-width: 90%; /* Limiter la largeur maximale de la vidéo sur les tablettes */
-    }
+   
 
 }
