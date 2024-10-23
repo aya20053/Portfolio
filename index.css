@@ -114,7 +114,6 @@ video {
     z-index: 2; /* Placer le texte au-dessus de l'arrière-plan flou */
 color: #acc9ea;
 }
-
 .video-background video {
     min-width: 100%;
     min-height: 100%;
