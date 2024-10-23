@@ -1,3 +1,254 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5b4668929c274ad51faf3f970b30199ff350d54a8d956c7456bc7da80f084700
-size 11858
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aya Aatfaoui</title>
+    <link rel="icon" type="image/png" href="doc/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-DyZvMvz0M47RxOZW4v3Y4Sw8kjHIxKP+5E8wDxtM6Iw65Oe7gDJ2BrU1YfnT2M3Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.9); /* Couleur avec transparence */
+            color: #fff; /* Couleur du texte */
+            padding: 10px; /* Padding autour du header */
+            position: sticky; /* Rester en haut lors du défilement */
+            top: 0; /* Positionner en haut */
+            z-index: 1000; /* Assure qu'il soit au-dessus des autres éléments */
+            display: flex; /* Utiliser Flexbox pour le layout */
+            justify-content: space-between; /* Espacement entre le logo et le menu */
+        }
+
+        nav ul {
+            list-style: none; /* Supprime les puces de la liste */
+            display: flex; /* Affiche les éléments de la liste en ligne */
+            justify-content: flex-end; /* Aligne le menu à droite */
+            margin: 10px; /* Marge autour du menu */
+            padding: 0; /* Supprime le padding */
+        }
+
+        nav ul li {
+            margin: 0 15px; /* Espacement entre les éléments de la liste */
+        }
+
+        nav ul li a {
+            color: #142c48; /* Couleur des liens */
+            text-decoration: none; /* Supprime le soulignement */
+            font-weight: bold; /* Met le texte en gras */
+        }
+
+        /* Style du logo circulaire */
+        .logo {
+            width: 50px; /* Ajuste la taille selon tes préférences */
+            height: 50px; /* Assure-toi que la hauteur soit la même que la largeur */
+            border-radius: 50%; /* Crée un effet de cercle */
+            object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
+        }
+     
+    </style>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#about">
+                    <img src="doc/logo.jpg" alt="Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" style="color: rgb(20, 44, 72);font-weight: bold;">Acceuil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#formation" style="color: rgb(20, 44, 72);font-weight: bold;">Formation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#competence" style="color: rgb(20, 44, 72);font-weight: bold;">Compétences</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects" style="color: rgb(20, 44, 72);font-weight: bold;">Projets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" style="color: rgb(20, 44, 72);font-weight: bold;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <section id="about">
+            <div class="video-background">
+                <video autoplay muted loop>
+                    <source src="doc/VIDEO2.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéo.
+                </video>
+                <div class="overlay"></div> <!-- Superposition de couleur -->
+
+            </div>
+            <div id="content">
+                <h1>AATFAOUI AYA</h1>
+                <p>Etudiante en Licence Professionnelle Informatique et Mathématiques Appliquées à la Faculté Polydisciplinaire de Sidi Bennour.</p>
+            </div>
+        </section>
+        
+    
+    
+    <section id="formation">
+        <h2  class="styled-title">Formation</h2>
+        <div class="diplomas">
+            <div class="diploma">
+                <i class="fas fa-user-graduate"></i> <!-- Icône pour le diplôme -->
+                <h3> Licence Professionnelle Informatique et Mathématiques Appliquées</h3>
+                <p>2024 – en cours<br>Faculté Polydisciplinaire Sidi Bennour (FP-SB)</p>
+            </div>
+            <div class="diploma">
+                <i class="fas fa-user-graduate"></i> <!-- Icône pour le diplôme -->
+                <h3>Diplôme Universitaire de Technologie en Génie Informatique</h3>
+                <p>2022 – 2024<br>École Supérieure de Technologie Sidi Bennour (EST-SB)</p>
+            </div>
+            <div class="diploma">
+                <i class="fas fa-graduation-cap"></i> <!-- Icône pour le bac -->
+                <h3>2ème Année Bac Sciences Physiques - Option Français</h3>
+                <p>2021 – 2022<br>Lycée Qualifiant ANNAJD</p>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="competence">
+        <h2 class="styled-title">Compétences</h2>
+        <div class="skills-container">
+            <div class="skill"><i class="fas fa-code"></i><br> HTML, CSS, JavaScript</div>
+            <div class="skill"><i class="fab fa-php"></i><br> PHP</div>
+            <div class="skill"><i class="fab fa-c fa-2x"></i><br> C, C++</div>
+            <div class="skill"><i class="fas fa-cogs"></i><br>VB.NET</div>
+            <div class="skill"><i class="fab fa-java"></i><br>JAVA</div>
+            <div class="skill"><i class="fas fa-database"></i><br> SQL, MySQL, ORACLE, PL/SQL, Dexie</div>
+            <div class="skill"><i class="fas fa-pencil-alt"></i><br> UML, Merise</div>
+            <div class="skill"><i class="fas fa-mobile-alt"></i><br> IONIC</div>
+            <div class="skill"><i class="fab fa-angular"></i><br>Angular</div>
+            <div class="skill"><i class="fab fa-js-square"></i><br>TypeScript</div>
+            <div class="skill"><i class="fas fa-network-wired"></i><br>Réseau Informatique</div>
+            <div class="skill"><i class="fab fa-github"></i><br> Git, GitHub</div> <!-- Ajout de GitHub -->
+            <div class="skill"><i class="fas fa-file-word"></i><br> Word</div>
+            <div class="skill"><i class="fas fa-file-powerpoint"></i><br> PowerPoint</div>
+            <div class="skill"><i class="fas fa-file-excel"></i><br>Excel</div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+
+
+
+    <section id="projects">
+        <h2  class="styled-title">Projets</h2>
+        <div class="projects-container">
+            <div class="project">
+                <i class="fas fa-mobile-alt project-logo"></i> <!-- Icône pour le mobile -->
+                <h3>Projet Fin d’Étude </h3>
+                <p>Conception et développement d’une application web et mobile de gestion des employés pour le projet JFC5,avec Ionic,Angulair,TypeScript et Dexie.</p>
+            </div>
+            <div class="project">
+                <i class="fas fa-hotel project-logo"></i> <!-- Icône pour l'application de gestion d'hôtel -->
+                <h3>Stage Technique</h3>
+                <p>Conception et développement d’une application desktop de gestion des chambres d’hôtel en Java et Oracle.</p>
+            </div>
+            <div class="project">
+                <i class="fas fa-shopping-cart project-logo"></i> <!-- Icône pour le site e-commerce -->
+                <h3>Projet</h3>
+                <p>Conception et développement d’un site e-commerce en utilisant HTML, CSS, JavaScript, PHP et MySQL.</p>
+            </div>
+            <div class="project">
+                <i class="fas fa-globe project-logo"></i> <!-- Icône pour le site web -->
+                <h3>Stage Initiation</h3>
+                <p>Développement d’un site web pour le projet JFC en utilisant HTML, CSS et JavaScript.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+
+   
+    
+    
+    <section id="contact">
+        <h2 class="styled-title-contact">Contactez-moi</h2>
+        <p id="con">Pour toute question ou information, n'hésitez pas à me contacter via les liens ci-dessous.</p>
+        <div class="icons">
+            <a href="mailto:ayaaatfaoui38@gmail.com" target="_blank" class="icon-box email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/aatfaoui-aya-99a605259" target="_blank" class="icon-box linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/aya20053" target="_blank" class="icon-box github">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <!-- Bouton pour télécharger le CV -->
+        <div class="download-cv">
+            <a href="doc/cv_AATFAOUI_AYA.pdf" class="btn-cv" download>
+                <i class="fas fa-download"></i> Télécharger mon CV
+            </a>
+        </div>
+        <p id="copy">&copy;2024 Aatfaoui Aya</p>
+    </section>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+    // Récupérer tous les liens de la navbar
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Fonction pour mettre à jour la classe active
+function setActiveLink() {
+    // Supprimer la classe active de tous les liens
+    navLinks.forEach(link => link.classList.remove('active'));
+    
+    // Ajouter la classe active à l'élément cliqué
+    this.classList.add('active');
+}
+
+// Ajouter un écouteur d'événement pour chaque lien
+navLinks.forEach(link => {
+    link.addEventListener('click', setActiveLink);
+});
+
+</script>
+<script>
+    document.addEventListener("scroll", function() {
+        var sections = document.querySelectorAll("section");
+        var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+    
+        sections.forEach(function(section) {
+            var sectionTop = section.offsetTop - 100; // Ajuster pour tenir compte de la hauteur de la navbar
+            var sectionHeight = section.offsetHeight;
+            var scrollPosition = window.scrollY;
+    
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(function(link) {
+                    link.parentElement.classList.remove("active");
+                    if (link.getAttribute("href").substring(1) === section.getAttribute("id")) {
+                        link.parentElement.classList.add("active");
+                    }
+                });
+            }
+        });
+    });
+    </script>
+    
+</body>
+</html>
