@@ -75,7 +75,7 @@
                             <a class="nav-link" href="#competence" style="color: rgb(20, 44, 72);font-weight: bold;">Compétences</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects" style="color: rgb(20, 44, 72);font-weight: bold;">Projets</a>
+                            <a class="nav-link" href="#projects" style="color: rgb(20, 44, 72);font-weight: bold;">Experiences</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact" style="color: rgb(20, 44, 72);font-weight: bold;">Contact</a>
@@ -102,28 +102,28 @@
         
     
     
-    <section id="formation">
-        <h2  class="styled-title">Formation</h2>
-        <div class="diplomas">
-            <div class="diploma">
-                <i class="fas fa-user-graduate"></i> <!-- Icône pour le diplôme -->
-                <h3> Licence Professionnelle Informatique et Mathématiques Appliquées</h3>
-                <p>2024 – en cours<br>Faculté Polydisciplinaire Sidi Bennour (FP-SB)</p>
+        <section id="formation">
+            <h2 class="styled-title">Formation</h2>
+            <div class="diplomas">
+                <div class="diploma animate__animated" data-delay="0s">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Licence Professionnelle Informatique et Mathématiques Appliquées</h3>
+                    <p>2024 – en cours<br>Faculté Polydisciplinaire Sidi Bennour (FP-SB)</p>
+                 
+                </div>
+                <div class="diploma animate__animated" data-delay="0.3s">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Diplôme Universitaire de Technologie en Génie Informatique</h3>
+                    <p>2022 – 2024<br>École Supérieure de Technologie Sidi Bennour (EST-SB)</p>
+                </div>
+                <div class="diploma animate__animated" data-delay="0.9s">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>2ème Année Bac Sciences Physiques - Option Français</h3>
+                    <p>2021 – 2022<br>Lycée Qualifiant ANNAJD</p>
+                </div>
             </div>
-            <div class="diploma">
-                <i class="fas fa-user-graduate"></i> <!-- Icône pour le diplôme -->
-                <h3>Diplôme Universitaire de Technologie en Génie Informatique</h3>
-                <p>2022 – 2024<br>École Supérieure de Technologie Sidi Bennour (EST-SB)</p>
-            </div>
-            <div class="diploma">
-                <i class="fas fa-graduation-cap"></i> <!-- Icône pour le bac -->
-                <h3>2ème Année Bac Sciences Physiques - Option Français</h3>
-                <p>2021 – 2022<br>Lycée Qualifiant ANNAJD</p>
-            </div>
-        </div>
-    </section>
-    
-    
+        </section>
+        
 
     <section id="competence">
         <h2 class="styled-title">Compétences</h2>
@@ -137,7 +137,7 @@
             <div class="skill"><i class="fas fa-pencil-alt"></i><br> UML, Merise</div>
             <div class="skill"><i class="fas fa-mobile-alt"></i><br> IONIC</div>
             <div class="skill"><i class="fab fa-angular"></i><br>Angular</div>
-            <div class="skill"><i class="fab fa-js-square"></i><br>TypeScript</div>
+            <div class="skill"><i class="fab fa-ts-square"></i><br>TypeScript</div>
             <div class="skill"><i class="fas fa-network-wired"></i><br>Réseau Informatique</div>
             <div class="skill"><i class="fab fa-github"></i><br> Git, GitHub</div> <!-- Ajout de GitHub -->
             <div class="skill"><i class="fas fa-file-word"></i><br> Word</div>
@@ -276,6 +276,80 @@ navLinks.forEach(link => {
         });
     });
     </script>
-    
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function () {
+    const diplomas = document.querySelectorAll(".diploma");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Ajout du délai progressif en fonction de l'index de l'élément
+                    entry.target.style.animationDelay = `${index * 0.3}s`; // Par exemple, 0.3s d'intervalle entre chaque élément
+                    entry.target.classList.add("fade-in"); // Choisissez fade-in ou une autre animation
+                    observer.unobserve(entry.target); // Arrête l'observation une fois que l'animation est déclenchée
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    diplomas.forEach((diploma) => {
+        observer.observe(diploma);
+    });
+});
+
+    </script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const skills = document.querySelectorAll(".skill");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Délai progressif pour chaque compétence
+                    entry.target.style.animationDelay = `${index * 0.2}s`; // Ajustez le délai pour un intervalle agréable
+                    entry.target.classList.add("fade-in"); // Ajout de l'animation
+                    observer.unobserve(entry.target); // Stoppe l'observation une fois déclenché
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    skills.forEach((skill) => {
+        observer.observe(skill);
+    });
+});
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const projectCards = document.querySelectorAll(".project-card");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Applique un délai progressif pour chaque carte de projet
+                    entry.target.style.animationDelay = `${index * 0.3}s`; // Ajustez le délai pour un intervalle agréable
+                    entry.target.classList.add("fade-in"); // Ajoute la classe d'animation
+                    observer.unobserve(entry.target); // Stop l'observation après animation
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    projectCards.forEach((card) => {
+        observer.observe(card);
+    });
+});
+
+</script>
 </body>
 </html>

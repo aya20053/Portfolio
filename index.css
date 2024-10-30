@@ -139,6 +139,24 @@ color: #acc9ea;
 }
 
 /*formation*/
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.diploma {
+    opacity: 0;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.diploma.fade-in {
+    animation-name: fadeIn;
+}
+
+
+
+
 #formation {
     padding: 80px 20px; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
@@ -234,6 +252,22 @@ color: #acc9ea;
 }
 
 /*competances*/
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.skill {
+    opacity: 0;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.skill.fade-in {
+    animation-name: fadeIn;
+}
+
 #competance {
     padding: 50px 20px; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
@@ -333,6 +367,25 @@ color: #acc9ea;
 .skill:hover::after {
     transform: scaleY(1); /* Affiche le trait à gauche et à droite */
 }
+
+
+/* Experience */
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.project-card {
+    opacity: 0;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.project-card.fade-in {
+    animation-name: fadeIn;
+}
+
 #projects {
     padding: 50px 20px;
     text-align: center;
