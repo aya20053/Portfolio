@@ -158,16 +158,10 @@ color: #acc9ea;
 
 
 #formation {
-    padding: 80px 20px; /* Espacement autour du contenu */
+    padding: 80px ; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
-    
-  
 }
 
-#formation h2 {
-    font-size: 2.5em; /* Taille du titre de la section */
-    margin-bottom: 30px; /* Espacement sous le titre */
-}
 
 .diplomas {
     display: flex; /* Affichage en flex pour aligner les cartes */
@@ -269,7 +263,7 @@ color: #acc9ea;
 }
 
 #competance {
-    padding: 50px 20px; /* Espacement autour du contenu */
+    padding: 80px ; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
 }
 
