@@ -103,7 +103,9 @@
     
     
         <section id="formation">
-            <h2 class="styled-title">Formation</h2>
+            <h2 class="styled-title">
+                <span>Formation</span>
+            </h2>
             <div class="diplomas">
                 <div class="diploma animate__animated" data-delay="0s">
                     <i class="fas fa-user-graduate"></i>
@@ -165,7 +167,6 @@
                 <div class="project-card">
                     <i class="fas fa-briefcase project-logo"></i>
                     <div class="project-details">
-                        <h4>Application de gestion des employés</h4>
                         <h5>Stage Technique au sein de OCP-Jorf Lasfar (2024)</h5>
                         <p>La conception et le développement d’une application web et mobile de gestion des employés pour le projet JFC5 en utilisant Ionic, Angular, TypeScript et Dexie.</p>
                     </div>
@@ -175,7 +176,6 @@
                 <div class="project-card">
                     <i class="fas fa-globe project-logo"></i>
                     <div class="project-details">
-                        <h4> Site Web</h4>
                         <h5>Stage Initiation au sein de OCP-Jorf Lasfar (2023)</h5>
                         <p>Le développement d’un site web identificatif pour le projet JFC5 en utilisant HTML, CSS, JavaScript.</p>
                     </div>
@@ -192,7 +192,6 @@
                 <div class="project-card"> 
                     <i class="fas fa-hotel project-logo"></i>
                     <div class="project-details">
-                        <h4> Application de gestion des chambres d'hôtel</h4>
                         <p>La conception et le développement d’une application desktop de gestion de chambres d’hôtel en Java et Oracle.</p>
                     </div>
                 </div>
@@ -201,7 +200,6 @@
                 <div class="project-card">
                     <i class="fas fa-shopping-cart project-logo"></i>
                     <div class="project-details">
-                        <h4>Un site e-commerce</h4>
                         <p>La conception et le développement d’un site web e-commerce en utilisant HTML, CSS, JavaScript, PHP, et MySQL.</p>
                     </div>
                 </div>
@@ -213,7 +211,7 @@
     
     
     <section id="contact">
-        <h2 class="styled-title-contact">Contactez-moi</h2>
+        <h2 class="styled-title">Contactez-moi</h2>
         <p id="con">Pour toute question ou information, n'hésitez pas à me contacter via les liens ci-dessous.</p>
         <div class="icons">
             <a href="mailto:ayaaatfaoui38@gmail.com" target="_blank" class="icon-box email">
@@ -235,121 +233,8 @@
         <p id="copy">&copy;2024 Aatfaoui Aya</p>
     </section>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
 
-    // Récupérer tous les liens de la navbar
-const navLinks = document.querySelectorAll('.nav-link');
+<script src="script.js" async></script>
 
-// Fonction pour mettre à jour la classe active
-function setActiveLink() {
-    // Supprimer la classe active de tous les liens
-    navLinks.forEach(link => link.classList.remove('active'));
-    
-    // Ajouter la classe active à l'élément cliqué
-    this.classList.add('active');
-}
-
-// Ajouter un écouteur d'événement pour chaque lien
-navLinks.forEach(link => {
-    link.addEventListener('click', setActiveLink);
-});
-
-</script>
-<script>
-    document.addEventListener("scroll", function() {
-        var sections = document.querySelectorAll("section");
-        var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-    
-        sections.forEach(function(section) {
-            var sectionTop = section.offsetTop - 100; // Ajuster pour tenir compte de la hauteur de la navbar
-            var sectionHeight = section.offsetHeight;
-            var scrollPosition = window.scrollY;
-    
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                navLinks.forEach(function(link) {
-                    link.parentElement.classList.remove("active");
-                    if (link.getAttribute("href").substring(1) === section.getAttribute("id")) {
-                        link.parentElement.classList.add("active");
-                    }
-                });
-            }
-        });
-    });
-    </script>
-    <script>
-        
-        document.addEventListener("DOMContentLoaded", function () {
-    const diplomas = document.querySelectorAll(".diploma");
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    // Ajout du délai progressif en fonction de l'index de l'élément
-                    entry.target.style.animationDelay = `${index * 0.3}s`; // Par exemple, 0.3s d'intervalle entre chaque élément
-                    entry.target.classList.add("fade-in"); // Choisissez fade-in ou une autre animation
-                    observer.unobserve(entry.target); // Arrête l'observation une fois que l'animation est déclenchée
-                }
-            });
-        },
-        { threshold: 0.1 }
-    );
-
-    diplomas.forEach((diploma) => {
-        observer.observe(diploma);
-    });
-});
-
-    </script>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const skills = document.querySelectorAll(".skill");
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    // Délai progressif pour chaque compétence
-                    entry.target.style.animationDelay = `${index * 0.2}s`; // Ajustez le délai pour un intervalle agréable
-                    entry.target.classList.add("fade-in"); // Ajout de l'animation
-                    observer.unobserve(entry.target); // Stoppe l'observation une fois déclenché
-                }
-            });
-        },
-        { threshold: 0.1 }
-    );
-
-    skills.forEach((skill) => {
-        observer.observe(skill);
-    });
-});
-
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const projectCards = document.querySelectorAll(".project-card");
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    // Applique un délai progressif pour chaque carte de projet
-                    entry.target.style.animationDelay = `${index * 0.3}s`; // Ajustez le délai pour un intervalle agréable
-                    entry.target.classList.add("fade-in"); // Ajoute la classe d'animation
-                    observer.unobserve(entry.target); // Stop l'observation après animation
-                }
-            });
-        },
-        { threshold: 0.1 }
-    );
-
-    projectCards.forEach((card) => {
-        observer.observe(card);
-    });
-});
-
-</script>
 </body>
 </html>

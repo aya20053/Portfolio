@@ -391,11 +391,7 @@ color: #acc9ea;
     text-align: center;
 }
 
-#projects h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    margin-top: 40px;
-}
+
 
 /* Conteneur pour chaque section (expérience professionnelle et académique) */
 .experience-section {
@@ -479,40 +475,7 @@ color: #acc9ea;
 #con{
     margin-top: 30px;
 }
-
-  .styled-title-contact {
-    font-family: 'Dancing Script', cursive; /* Utiliser la même police manuscrite */
-    font-size: 2em; /* Taille de la police */
-    text-align: center; /* Centrer le texte */
-    position: relative; /* Nécessaire pour les lignes */
-    margin: 40px 0; /* Marge autour du titre */
-    margin-top: 90px;
-    color: #1c3f66; /* Couleur des lignes */
-
-
-}
-
-.styled-title-contact:before,
-.styled-title-contact:after {
-    content: ''; /* Nécessaire pour créer des éléments de ligne */
-    position: absolute;
-    top: 50%; /* Positionner verticalement au centre du titre */
-    width: 40%; /* Largeur des lignes */
-    height: 2px; /* Épaisseur des lignes */
-    background-color: #1c3f66; /* Couleur des lignes */
-}
-
-.styled-title-contact:before {
-    right: 50%; /* Aligner la ligne à gauche */
-    margin-right: 135px; /* Ajoute un espacement entre le texte et la ligne */
-}
-
-.styled-title-contact:after {
-    left: 50%; /* Aligner la ligne à droite */
-    margin-left: 135px; /* Ajoute un espacement entre le texte et la ligne */
-}
-
-  
+ 
   .icons {
     display: flex;
     justify-content: center;
@@ -570,7 +533,7 @@ color: #acc9ea;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease; /* Durée de la transition */
 }
 
 .btn-cv:hover {
@@ -580,37 +543,21 @@ color: #acc9ea;
 
 
 
-
 .styled-title {
-    font-family: 'Dancing Script', cursive; /* Utiliser une police manuscrite */
-    font-size: 2em; /* Taille de la police */
-    text-align: center; /* Centrer le texte */
-    position: relative; /* Nécessaire pour les lignes */
-    margin: 20px; /* Marge autour du titre */
-    margin-top: 30px;
-   color: #1c3f66; /* Couleur des lignes */
-   
-
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d6e2ef;
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: 10px 20px;
+    border: 2px solid #1c3f66;
+    background: #1c3f66;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 40px;
 }
 
-.styled-title:before,
-.styled-title:after {
-    content: ''; /* Nécessaire pour créer des éléments de ligne */
-    position: absolute;
-    top: 50%; /* Positionner verticalement au centre du titre */
-    width: 40%; /* Largeur des lignes */
-    height: 2px; /* Épaisseur des lignes */
-    background-color: #1c3f66; /* Couleur des lignes */
-}
-
-.styled-title:before {
-    left: 0; /* Positionne la ligne à gauche */
-    
-}
-
-.styled-title:after {
-    right: 0; /* Positionne la ligne à droite */
-}
 
 
 /* sur le telephonne */
@@ -742,10 +689,7 @@ color: #acc9ea;
         margin-top: 20px; /* Adjust top margin for mobile */
     }
 
-    .styled-title-contact, .styled-title-{
-        font-size: 1.5em; /* Adjust font size for mobile */
-        margin: 20px 0; /* Adjust margins for mobile */
-    }
+   
 
    
     .icons {
@@ -769,26 +713,6 @@ color: #acc9ea;
     
 }
 @media (max-width: 768px) {
-    .styled-title {
-        font-size: 1em; /* Réduire la taille de la police sur mobile */
-        margin: 15px; /* Réduire les marges sur mobile */
-    }
-
-    .styled-title:before,.styled-title-contact:after,.styled-title-contact:before,
-    .styled-title:after {
-        width: 20%; /* Réduire la longueur des lignes sur mobile */
-    }
-}
-
-.styled-title {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-    
-
     #copy {
         padding: 10px; /* Adjust padding for mobile */
     }
@@ -798,22 +722,8 @@ color: #acc9ea;
         font-size: 1em; /* Adjust font size for mobile */
     }
     
-
-@media (max-width: 768px) {
-    .styled-title {
-        font-size: 1em; /* Réduire la taille de la police sur mobile */
-        margin: 15px; /* Réduire les marges sur mobile */
-    }
-
-    .styled-title:before,.styled-title-contact:after,.styled-title-contact:before,
-    .styled-title:after {
-        width: 20%; /* Réduire la longueur des lignes sur mobile */
-    }
 }
 
-.styled-title {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
+
+
+
