@@ -405,10 +405,11 @@ color: #acc9ea;
 }
 
 /* Carte de chaque projet */
-.project-card {
+.project-card{
     width: 45%; /* Chaque carte prend 45% de la largeur de la ligne */
     padding: 20px;
-    margin: 10px ;
+    gap: 40px; /* Espacement entre les cartes */
+
     border: 1px solid #ccc;
     border-radius: 8px;
     background: #d6e2ef;
