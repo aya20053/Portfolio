@@ -597,13 +597,10 @@ color: #acc9ea;
   
 @media (max-width: 768px) {
     #formation {
-        padding: 40px 10px; /* Adjust padding for mobile */
+        padding:  10px; /* Adjust padding for mobile */
     }
 
-    #formation h2 {
-        font-size: 2.3rem; /* Smaller font size for mobile */
-        margin-bottom: 10px;
-    }
+    
 
     .diplomas {
         flex-direction: column; /* Stack cards vertically on mobile */
@@ -627,16 +624,16 @@ color: #acc9ea;
 
 
 @media (max-width: 768px) {
-    #competance {
-        padding: 40px 10px; /* Adjust padding for mobile */
+    #competence {
+        padding:10px; /* Adjust padding for mobile */
     }
-    #competance h2 {
-        font-size: 2.3rem; /* Smaller font size for mobile */
+  .styled-title {
+        font-size: 1.3rem; /* Smaller font size for mobile */
         margin-bottom: 10px;
     }
    
 
-      #competance.skills-container {
+      #competence.skills-container {
         display: grid;
         place-items: center;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -665,19 +662,14 @@ color: #acc9ea;
         flex-direction: column; /* Affiche les cartes en colonne */
     }
     .project-card {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 100%; /* Make skills take up full width on mobile */
+        padding: 10px; /* Adjust padding for mobile */
     }
     .project-logo {
         font-size: 24px; /* Réduit la taille des icônes */
     }
-    projects {
-        padding: 40px 10px; /* Adjust padding for mobile */
-    }
-
-    projects h2 {
-        font-size: 2.3rem; /* Smaller font size for mobile */
-        margin-bottom: 10px;
+    #projects {
+        padding: 10px; /* Adjust padding for mobile */
     }
 
 }
