@@ -631,8 +631,8 @@ color: #acc9ea;
         padding: 40px 10px; /* Adjust padding for mobile */
     }
     #competance h2 {
-        font-size: 1.5em; /* Smaller font size for mobile */
-        margin-bottom: 20px; /* Adjust spacing for mobile */
+        font-size: 2.3rem; /* Smaller font size for mobile */
+        margin-bottom: 10px;
     }
    
 
@@ -671,6 +671,15 @@ color: #acc9ea;
     .project-logo {
         font-size: 24px; /* Réduit la taille des icônes */
     }
+    projects {
+        padding: 40px 10px; /* Adjust padding for mobile */
+    }
+
+    projects h2 {
+        font-size: 2.3rem; /* Smaller font size for mobile */
+        margin-bottom: 10px;
+    }
+
 }
 
 
@@ -698,17 +707,6 @@ color: #acc9ea;
         font-size: 2em; /* Adjust icon size for mobile */
     }
 
-    #copy {
-        padding: 10px; /* Adjust padding for mobile */
-    }
-
-    .btn-cv {
-        padding: 8px 16px; /* Adjust button padding for mobile */
-        font-size: 1em; /* Adjust font size for mobile */
-    }
-    
-}
-@media (max-width: 768px) {
     #copy {
         padding: 10px; /* Adjust padding for mobile */
     }
