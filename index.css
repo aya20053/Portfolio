@@ -101,6 +101,7 @@ video {
     z-index: 2; /* Placer le contenu au-dessus de la vidéo */
     color: white;
     text-align: center;
+  
 }
 
 
@@ -111,6 +112,7 @@ video {
     font-weight: bold; /* Rendre le texte en gras */
     margin-bottom: 20px; /* Espacement sous le titre principal */
     font-optical-sizing: auto;
+    margin-top: 190px;
     z-index: 2; /* Placer le texte au-dessus de l'arrière-plan flou */
 color: #acc9ea;
 }
@@ -124,9 +126,28 @@ color: #acc9ea;
     left: 50%;
     zoom:100%;
     transform: translate(-50%, -50%);
-    filter: blur(6px); /* Adjust the blur radius as needed */
+    filter: blur(10px); /* Adjust the blur radius as needed */
 
 
+}/* Animation de la machine à écrire */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Appliquer l'animation à l'élément avec la classe typing */
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid black; /* Curseur de la machine à écrire */
+    font-family: monospace;
+    animation: typing 4s steps(40, end), blink 0.5s step-end infinite;
+    display: inline-block;
+    width: 100%; /* Ajuste selon la longueur du texte */
 }
 
 
@@ -262,9 +283,10 @@ color: #acc9ea;
     animation-name: fadeIn;
 }
 
-#competance {
+#competence {
     padding: 80px ; /* Espacement autour du contenu */
     text-align: center; /* Centrer le texte */
+   
 }
 
 
@@ -330,32 +352,17 @@ color: #acc9ea;
     transform: scaleY(0); /* Invisible par défaut */
 }
 
-/* Trait en bas */
-.skill::after {
-    bottom: 0;
-    left: 0;
-    width: 100%; /* Épaisseur du trait */
-    height: 2px; /* Épaisseur du trait */
-    transform: scaleX(0); /* Invisible par défaut */
-}
 
-/* Trait à droite */
-.skill::after {
-    top: 0;
-    right: 0;
-    width: 2px; /* Épaisseur du trait */
-    height: 100%;
-    transform: scaleY(0); /* Invisible par défaut */
-}
+
 
 /* Affichage des traits lors du survol */
 .skill:hover::before,
 .skill:hover::after {
-    transform: scaleX(1); /* Affiche le trait en haut et en bas */
+    transform: scaleX(1); /* Affiche le trait en haut */
 }
 
 .skill:hover::after {
-    transform: scaleY(1); /* Affiche le trait à gauche et à droite */
+    transform: scaleY(1); /* Affiche le trait à gauche  */
 }
 
 
@@ -376,10 +383,11 @@ color: #acc9ea;
     animation-name: fadeIn;
 }
 
-#projects {
-    padding: 50px 20px;
-    text-align: center;
+#projects { 
+    padding: 80px ; /* Espacement autour du contenu */
+    text-align: center; /* Centrer le texte */
 }
+
 
 
 
@@ -419,7 +427,9 @@ color: #acc9ea;
     justify-content: center; /* Centre l'icône horizontalement */
     margin-bottom: 10px; /* Espacement sous l'icône */
 }
-
+.experience-type{
+    font-size: larger;
+}
 
 /* Effet de survol avec trait */
 .project-card::before,
@@ -457,10 +467,8 @@ color: #acc9ea;
 
 /*contact*/
 #contact {
-    display: flex; /* Utilise Flexbox pour la mise en page */
-    max-width: 1200px; /* Limite la largeur maximale du conteneur */
-    margin: 0 auto; /* Centre le conteneur horizontalement */
-    padding: 0 20px; /* Ajoute un peu d'espacement latéral */
+    padding: 80px ; /* Espacement autour du contenu */
+    text-align: center; /* Centrer le texte */
 }
 #con{
     margin-top: 30px;
@@ -512,7 +520,7 @@ color: #acc9ea;
     text-align: center;
     margin-top: auto;
     padding: 10px;
-    color:#1c3f66;
+    color:rgb(28, 63, 102);
     width: 100%;
 }
 .btn-cv {
@@ -538,7 +546,6 @@ color: #acc9ea;
     font-weight: bold;
     color: #d6e2ef;
     text-align: center;
-    margin: 1.5rem 0;
     padding: 10px 20px;
     border: 2px solid #1c3f66;
     background: #1c3f66;
@@ -556,7 +563,6 @@ color: #acc9ea;
     #about {
         background-size: cover;
         background-position: center;
-        color: #6dabf2;
         text-align: center;
         display: flex;
         align-items: center;
@@ -568,11 +574,11 @@ color: #acc9ea;
     
 
     #content {
-        margin-top: 100px; /* Adjust for smaller screens */
+        margin-top:30px; /* Adjust for smaller screens */
     }
 
     #about h1 {
-        font-size: 3rem; /* Smaller font size for mobile */
+        font-size: 2.3rem; /* Smaller font size for mobile */
         margin-bottom: 10px;
     }
 
@@ -595,8 +601,8 @@ color: #acc9ea;
     }
 
     #formation h2 {
-        font-size: 1.5em; /* Smaller font size for mobile */
-        margin-bottom: 20px; /* Adjust spacing for mobile */
+        font-size: 2.3rem; /* Smaller font size for mobile */
+        margin-bottom: 10px;
     }
 
     .diplomas {
