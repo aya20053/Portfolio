@@ -641,7 +641,7 @@ color: #acc9ea;
     }
     .skill {
         width: 100%; /* Make skills take up full width on mobile */
-        padding: 15px; /* Adjust padding for mobile */
+        padding: 10px; /* Adjust padding for mobile */
     }
 
     .skill i {
@@ -670,7 +670,7 @@ color: #acc9ea;
         font-size: 24px; /* Réduit la taille des icônes */
     }
     #projects {
-        padding: 10px; /* Adjust padding for mobile */
+        padding: 20px; /* Adjust padding for mobile */
     }
 
 }
