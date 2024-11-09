@@ -531,15 +531,16 @@ font-weight: bold;
     display: inline-block;
     margin-top: 50px;
     padding: 10px 20px;
-    background-color: #1c3f66; 
-    color: white;
+   border:1px solid #08366b;
+    color: #08366b;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: background-color 0.3s ease; /* Durée de la transition */
 }
 
 .btn-cv:hover {
     background-color: #08366b; /* Teinte plus foncée au survol */
+    color: antiquewhite;
 }
 
 
