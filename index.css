@@ -432,7 +432,7 @@ color: #acc9ea;
     margin-bottom: 10px; /* Espacement sous l'icône */
 }
 .experience-type{
-    font-size: larger;
+font-weight: bold;
 }
 
 /* Effet de survol avec trait */
