@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 ::selection{
-    background:rgb(20, 44, 72);
+    background:#142c48;
     color:lemonchiffon;
 }
 
@@ -143,7 +143,6 @@ color: #acc9ea;
 .typing {
     overflow: hidden;
     white-space: nowrap;
-    border-right: 3px solid black; /* Curseur de la machine à écrire */
     font-family: monospace;
     animation: typing 4s steps(40, end), blink 0.5s step-end infinite;
     display: inline-block;
@@ -324,7 +323,11 @@ color: #acc9ea;
     text-align: center;
     transition: all 0.3s ease; /* Transition pour le survol */
 }
-
+.logo_skill {
+    width: 50px; /* Ajuste la taille selon tes préférences */
+    height: 50px; /* Assure-toi que la hauteur soit la même que la largeur */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
+}
 /* Trait en haut */
 .skill::before,
 .skill::after {
