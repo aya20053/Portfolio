@@ -84,6 +84,7 @@ section {
     height: 100%;
     z-index: -1; /* Vidéo en arrière-plan */
     overflow: hidden;
+
   
 
 }
@@ -92,6 +93,7 @@ video {
     width: 100%;
     height: 100%;
     object-fit: cover; /* La vidéo couvrira toute la section "About" */
+
 }
 
 
@@ -531,17 +533,19 @@ font-weight: bold;
     display: inline-block;
     margin-top: 50px;
     padding: 10px 20px;
-   border:1px solid #08366b;
+    border: 1px solid #08366b;
     color: #08366b;
     text-decoration: none;
     border-radius: 10px;
-    transition: background-color 0.3s ease; /* Durée de la transition */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition pour la couleur du texte et le fond */
 }
 
 .btn-cv:hover {
-    background-color: #08366b; /* Teinte plus foncée au survol */
-    color: antiquewhite;
+    background-color: #08366b; /* Couleur de fond au survol */
+    color: antiquewhite; /* Couleur de texte au survol */
+    transition: 1s ease-in-out;
 }
+
 
 
 
