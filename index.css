@@ -473,7 +473,14 @@ font-weight: bold;
 }
 
 
-
+.project-details a {
+    text-decoration: none;
+    color: #024069;
+    font-weight: bold;
+}
+.project-details a:hover {
+    text-decoration: underline;
+}
 /* Conteneur pour chaque section */
 .projects-row {
     display: grid; /* Utiliser une grille pour organiser les cartes */
