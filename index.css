@@ -398,7 +398,7 @@ color: #acc9ea;
 
 /* Conteneur pour chaque section (expérience professionnelle et académique) */
 .experience-section {
-    margin-bottom: 40px; /* Espacement entre chaque section */
+    margin-bottom: 20px; /* Espacement entre chaque section */
 }
 
 /* Utiliser flexbox pour aligner les cartes sur la même ligne */
@@ -468,6 +468,47 @@ font-weight: bold;
 
 .project-card:hover::after {
     transform: scaleY(1);
+}
+
+
+
+/* Conteneur pour chaque section */
+.projects-row {
+    display: grid; /* Utiliser une grille pour organiser les cartes */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste le nombre de colonnes en fonction de la largeur disponible */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-items: center; /* Centre les cartes horizontalement */
+}
+
+/* Carte de chaque projet */
+.project-card {
+    width: 100%; /* Chaque carte prend toute la largeur disponible */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #d6e2ef;
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+    text-align: center;
+    position: relative;
+}
+
+/* Effet de zoom sur la carte au survol */
+.project-card:hover {
+    transform: scale(1.05); /* Agrandit légèrement la carte au survol */
+}
+
+/* Icônes des projets */
+.project-logo {
+    font-size: 3em;
+    color: #1c3f66;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Détails du projet */
+.project-details h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 
