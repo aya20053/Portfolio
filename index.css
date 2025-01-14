@@ -399,6 +399,11 @@ color: #acc9ea;
 /* Conteneur pour chaque section (expérience professionnelle et académique) */
 .experience-section {
     margin-bottom: 20px; /* Espacement entre chaque section */
+    display: flex; /* Utiliser flexbox pour centrer le contenu */
+    flex-direction: column; /* Aligner les éléments en colonne */
+    align-items: center; /* Centrer horizontalement */
+    justify-content: center; /* Centrer verticalement */
+    text-align: center; /* Centrer le texte */
 }
 
 /* Utiliser flexbox pour aligner les cartes sur la même ligne */
@@ -410,18 +415,15 @@ color: #acc9ea;
 }
 
 /* Carte de chaque projet */
-.project-card{
-    width: 45%; /* Chaque carte prend 45% de la largeur de la ligne */
+.project-card {
+    width: 100%; /* Chaque carte prend toute la largeur disponible */
+    max-width: 400px; /* Limiter la largeur maximale des cartes */
     padding: 20px;
-    gap: 40px; /* Espacement entre les cartes */
-
     border: 1px solid #ccc;
     border-radius: 8px;
     background: #d6e2ef;
-    transition: all 0.3s ease;
-    text-align: left;
-    position: relative;
-    text-align: center;
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+    text-align: center; /* Centre le texte à l'intérieur de la carte */
 }
 
 /* Icônes des projets */
@@ -510,6 +512,37 @@ font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 10px;
 }
+
+
+
+.experience-section {
+    margin-bottom: 20px; /* Espacement entre chaque section */
+    display: flex; /* Utiliser flexbox pour centrer le contenu */
+    flex-direction: column; /* Aligner les éléments en colonne */
+    align-items: center; /* Centrer horizontalement */
+}
+
+/* Utiliser flexbox pour aligner les cartes sur la même ligne */
+.projects-row {
+    display: grid; /* Utiliser une grille pour organiser les cartes */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste le nombre de colonnes */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-items: center; /* Centre les cartes horizontalement */
+}
+
+/* Carte de chaque projet */
+.project-card {
+    width: 100%; /* Chaque carte prend toute la largeur disponible */
+    max-width: 400px; /* Limiter la largeur maximale des cartes */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #d6e2ef;
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+    text-align: center;
+    position: relative;
+}
+
 
 
 /*contact*/
