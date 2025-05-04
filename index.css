@@ -311,6 +311,7 @@ color: #acc9ea;
     border-radius: 8px; /* Optionnel : arrondir les coins */
     background: #d6e2ef; /* Couleur de fond blanche */
     transition: all 0.3s ease; /* Transition pour le survol */
+    margin-left: 30px;
 }
 
 
@@ -329,6 +330,24 @@ color: #acc9ea;
     width: 50px; /* Ajuste la taille selon tes préférences */
     height: 50px; /* Assure-toi que la hauteur soit la même que la largeur */
     object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
+}
+
+
+.skills-group-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.skills-group h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 /* Trait en haut */
 .skill::before,
@@ -715,35 +734,45 @@ font-weight: bold;
 
 @media (max-width: 768px) {
     #competence {
-        padding:10px; /* Adjust padding for mobile */
+        padding: 10px;
     }
-  .styled-title {
-        font-size: 1.3rem; /* Smaller font size for mobile */
+
+    .styled-title {
+        font-size: 1.3rem;
         margin-bottom: 10px;
+        text-align: center;
     }
-   
 
-      #competence.skills-container {
-        display: grid;
-        place-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .skills-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
+
     .skill {
-        width: 100%; /* Make skills take up full width on mobile */
-        padding: 10px; /* Adjust padding for mobile */
+        width: 140px;
+        height: 140px;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+      
+        border-radius: 12px;
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .skill i {
-        font-size: 2em; /* Reduce icon size for mobile */
+    .skill i, .skill img {
+        font-size: 2em;
+        margin-bottom: 8px;
     }
 
-    .skill h3 {
-        font-size: 1.2em; /* Adjust title size for mobile */
-        margin-bottom: 10px; /* Adjust spacing for mobile */
-        }
-
-    .skill p {
-        font-size: 0.9em; /* Adjust text size for mobile */
+    .skill img {
+        width: 40px;
+        height: 40px;
     }
 }
 
