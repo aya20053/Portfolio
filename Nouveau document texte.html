@@ -300,12 +300,11 @@
         
         /* Sections alternées */
         #formation, #competences, #projets {
-            background-color: var(--section-bg);
+            background-color: var(--white);
         }
         
        /* Section Formation */
         #formation {
-            background-color: var(--section-bg);
             padding: 80px 0;
         }
         
@@ -501,7 +500,24 @@
             font-weight: bold;
             font-size: 1.2rem;
         }
-        
+        /* Style pour le bouton GitHub */
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.github-btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
        
         
        
@@ -524,7 +540,7 @@
         
         /* Sections alternées */
         #projets-academiques {
-            background-color: var(--section-bg);
+            background-color: var(--white);
         }
         
         /* Responsive */
@@ -605,148 +621,101 @@
                 grid-template-columns: 1fr;
             }
         }
-         /* Section Contact */
+          /* Section Contact */
         #contact {
             background-color: var(--primary);
             color: white;
+            padding: 80px 0;
         }
-        
+         .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
         #contact h2 {
             color: white;
         }
         
         #contact h2::after {
             background-color: var(--accent);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30%;
         }
         
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
+        .welcome-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 50px;
         }
         
-        .contact-item {
-            display: flex;
-            align-items: center;
-            color: white;
-            font-size: 1.1rem;
+        .cv-download {
+            margin-top: 40px;
         }
         
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background-color: var(--accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            font-size: 1.3rem;
-        }
-        
-        .contact-text {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .contact-text strong {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-        
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        
-        .form-group label {
-            font-weight: 500;
-            color: white;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            font-family: inherit;
-            background-color: rgba(255, 255, 255, 0.9);
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
+        #contact.btn {
+            display: inline-block;
+            padding: 18px 40px;
             background-color: var(--accent);
             color: white;
-            border: none;
-            padding: 15px 30px;
+            text-decoration: none;
             border-radius: 30px;
             font-weight: 600;
-            cursor: pointer;
             transition: all 0.3s;
-            align-self: flex-start;
-            font-size: 1rem;
+            border: 2px solid var(--accent);
+            font-size: 1.1rem;
         }
         
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(188, 99, 46, 0.4);
-            background-color: white;
+        #contact.btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(188, 99, 46, 0.4);
+            background-color: transparent;
             color: var(--accent);
         }
         
-        .social-buttons {
+        #contact.social-buttons {
             display: flex;
-            gap: 15px;
-            margin-top: 30px;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
         }
         
         .social-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background-color: var(--accent);
             color: white;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             transition: all 0.3s;
             text-decoration: none;
         }
         
-        .social-btn:hover {
+       #contact .social-btn:hover {
             background-color: white;
             color: var(--accent);
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
         }
-        
-        
-        /* Footer */
-        footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-        
+         /* ===== FOOTER ===== */
+    footer {
+        color: white;
+        padding: 25px 0;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    #copy {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
         /* Responsive */
         @media (max-width: 768px) {
             body {
@@ -832,11 +801,12 @@
 </head>
 <body>
     <!-- Menu vertical -->
-    <div class="sidebar">
+   <div class="sidebar">
         <a href="#accueil"><i class="fas fa-home"></i><span>Accueil</span></a>
         <a href="#formation"><i class="fas fa-graduation-cap"></i><span>Formation</span></a>
+        <a href="#experiences"><i class="fas fa-briefcase"></i><span>Expériences</span></a>
+        <a href="#projets-academiques"><i class="fas fa-laptop-code"></i><span>Projets</span></a>
         <a href="#competences"><i class="fas fa-file-alt"></i><span>Compétences</span></a>
-        <a href="#projets"><i class="fas fa-briefcase"></i><span>Projets</span></a>
         <a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
     </div>
 
@@ -850,18 +820,18 @@
                     <p class="hero-description">Full stack developer passionnée par la technologie, j’associe compétences techniques et créativité pour concevoir des solutions digitales innovantes. Je maîtrise le développement frontend et backend et m’engage à offrir des expériences utilisateurs uniques, fonctionnelles et impactantes.</p>
                     
                     <div>
-                        <a href="#projets" class="btn">Voir mes projets</a>
+                        <a href="#projets-academiques" class="btn">Voir mes projets</a>
                         <a href="#contact" class="btn btn-outline">Me contacter</a>
                     </div>
                     
                     <div class="social-buttons">
-                        <a href="https://github.com" class="social-btn" target="_blank">
+                        <a href="https://github.com/aya20053" class="social-btn" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com" class="social-btn" target="_blank">
+                        <a href="www.linkedin.com/in/aatfaoui-aya-99a605259" class="social-btn" target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="mailto:aya@example.com" class="social-btn">
+                        <a href="mailto:ayaaatfaoui38@example.com" class="social-btn">
                             <i class="far fa-envelope"></i>
                         </a>
                     </div>
@@ -890,7 +860,7 @@
                         <span class="education-date">2024 – 2025</span>
                         <h3 class="education-title">Licence Professionnelle Informatique et Mathématiques Appliquées</h3>
                         <p class="education-institution">Faculté Polydisciplinaire Sidi Bennour (FP-SB)</p>
-                        <p class="education-description">Formation avancée en développement d'applications, algorithmique avancée et mathématiques appliquées à l'informatique.</p>
+                        <p class="education-description">Formation avancée en développement informatique, administration des systèmes et sécurité informatique.</p>
                     </div>
                 </div>
                 
@@ -926,29 +896,69 @@
         <div class="container">
             <h2>Expériences Professionnelles</h2>
             <div class="education-container">
+<!-- Nouvelle expérience Portfolio -->
+<div class="education-item">
+    <div class="education-icon">
+        <i class="fas fa-briefcase"></i>
+    </div>
+    <div class="education-content">
+        <span class="education-date">2025</span>
+        <h3 class="education-title">Portfolio Personnel</h3>
+        <p class="education-institution">Site web portfolio responsive et moderne</p>
+        <p class="education-description">
+            Conception et développement d'un portfolio personnel responsive avec design moderne, animations interactives et expérience utilisateur optimisée.
+        </p>
+        <div class="technologies">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Responsive Design</span>
+            <span class="tech-badge">UI/UX</span>
+        </div>
+        <!-- Boutons pour le portfolio -->
+        <div class="project-links" style="margin-top: 20px; display: flex; gap: 15px;">
+            <a href="https://github.com/aya20053/portfolio_Fatima_Ezzahraa-" class="github-btn" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; transition: all 0.3s;">
+                <i class="fab fa-github" style="margin-right: 8px; font-size: 1.2rem;"></i>
+                Code GitHub
+            </a>
+            <a href="https://fatima-ezzahra-ahrar.netlify.app" class="site-btn" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: var(--accent); color: white; text-decoration: none; border-radius: 5px; font-weight: 500; transition: all 0.3s;">
+                <i class="fas fa-external-link-alt" style="margin-right: 8px; font-size: 1.1rem;"></i>
+                Voir le site
+            </a>
+        </div>
+    </div>
+</div>
+
                 <!-- Stage projet fin d'étude SONASID -->
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="education-content">
-                        <span class="education-date">2025</span>
-                        <h3 class="education-title">Stage Projet Fin d'Étude - SONASID Jorf Lasfar</h3>
-                        <p class="education-institution">Application web de surveillance de réseau avec alertes en temps réel</p>
-                        <p class="education-description">
-                            Conception et réalisation d'une application web complète de surveillance de réseau avec système d'alertes en temps réel.
-                        </p>
-                        <div class="technologies">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">Tailwind CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Flask</span>
-                            <span class="tech-badge">SMTP</span>
-                        </div>
-                    </div>
-                </div>
+               <div class="education-item">
+    <div class="education-icon">
+        <i class="fas fa-laptop-code"></i>
+    </div>
+    <div class="education-content">
+        <span class="education-date">2025</span>
+        <h3 class="education-title">Stage Projet Fin d'Étude - SONASID Jorf Lasfar</h3>
+        <p class="education-institution">Application web de surveillance de réseau avec alertes en temps réel</p>
+        <p class="education-description">
+            Conception et réalisation d'une application web complète de surveillance de réseau avec système d'alertes en temps réel.
+        </p>
+        <div class="technologies">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">Tailwind CSS</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">SMTP</span>
+        </div>
+        <!-- Bouton GitHub ajouté ici -->
+        <div class="project-link" style="margin-top: 20px;">
+            <a href="https://github.com/aya20053/suivi_pannes" class="github-btn" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; transition: all 0.3s;">
+                <i class="fab fa-github" style="margin-right: 8px; font-size: 1.2rem;"></i>
+                Voir sur GitHub
+            </a>
+        </div>
+    </div>
+</div>
                 
                 <!-- Hackathon FPSB -->
                 <div class="education-item">
@@ -970,6 +980,19 @@
                             <span class="tech-badge">PHP</span>
                             <span class="tech-badge">MySQL</span>
                         </div>
+                             <!-- Bouton GitHub ajouté ici -->
+            <div class="project-link" style="margin-top: 20px;">
+                <a href="https://github.com/Zahra0706/investmaroc" class="github-btn" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; transition: all 0.3s;">
+                    <i class="fab fa-github" style="margin-right: 8px; font-size: 1.2rem;"></i>
+                    Voir sur GitHub
+                </a>
+                <a href="https://investmaroc.kesug.com/" class="site-btn" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: var(--accent); color: white; text-decoration: none; border-radius: 5px; font-weight: 500; transition: all 0.3s;">
+                <i class="fas fa-external-link-alt" style="margin-right: 8px; font-size: 1.1rem;"></i>
+                Voir le site
+            </a>
+            </div>
+                        </div>
+       
                     </div>
                 </div>
                 
@@ -1010,6 +1033,12 @@
                             <span class="tech-badge">Java</span>
                             <span class="tech-badge">Oracle</span>
                         </div>
+                         <div class="project-link" style="margin-top: 20px;">
+                <a href="https://github.com/aya20053/HotelManagementGUI.java" class="github-btn" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; transition: all 0.3s;">
+                    <i class="fab fa-github" style="margin-right: 8px; font-size: 1.2rem;"></i>
+                    Voir sur GitHub
+                </a>
+            </div>
                     </div>
                 </div>
                 
@@ -1058,6 +1087,12 @@
                             <span class="tech-badge">CSS</span>
                             <span class="tech-badge">JavaScript</span>
                         </div>
+                         <div class="project-link" style="margin-top: 20px;">
+                <a href="https://github.com/aya20053/jeu_save_me" class="github-btn" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; transition: all 0.3s;">
+                    <i class="fab fa-github" style="margin-right: 8px; font-size: 1.2rem;"></i>
+                    Voir sur GitHub
+                </a>
+            </div>
                     </div>
                 </div>
                 
@@ -1078,6 +1113,12 @@
                             <span class="tech-badge">CSS</span>
                             <span class="tech-badge">JavaScript</span>
                         </div>
+                         <div class="project-link" style="margin-top: 20px;">
+                <a href="https://github.com/aya20053/calculatrice-" class="github-btn" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; transition: all 0.3s;">
+                    <i class="fab fa-github" style="margin-right: 8px; font-size: 1.2rem;"></i>
+                    Voir sur GitHub
+                </a>
+            </div>
                     </div>
                 </div>
                 
@@ -1100,6 +1141,12 @@
                             <span class="tech-badge">PHP</span>
                             <span class="tech-badge">MySQL</span>
                         </div>
+                         <div class="project-link" style="margin-top: 20px;">
+                <a href="https://github.com/aya20053/site-web-e-commerce-" class="github-btn" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; transition: all 0.3s;">
+                    <i class="fab fa-github" style="margin-right: 8px; font-size: 1.2rem;"></i>
+                    Voir sur GitHub
+                </a>
+            </div>
                     </div>
                 </div>
             </div>
@@ -1234,91 +1281,44 @@
     </section>
   
 
-    <!-- Section Contact -->
+   <!-- Section Contact -->
     <section id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <p class="welcome-text">
-                        Je suis ouverte à toute opportunité de travail ou collaboration dans le domaine du développement web et mobile. 
-                        Que vous ayez un projet en tête, une question ou simplement envie de discuter de technologies, n'hésitez pas à me contacter. 
-                        Je suis toujours intéressée par de nouveaux défis et collaborations enrichissantes.
-                    </p>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <strong>Adresse</strong>
-                            <span>Casablanca, Maroc</span>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <strong>Téléphone</strong>
-                            <span>+212 6 00 00 00 00</span>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <strong>Email</strong>
-                            <span>aya.a@example.com</span>
-                        </div>
-                    </div>
-                    
-                    <div class="social-buttons">
-                        <a href="https://linkedin.com/in/yourprofile" class="social-btn" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/yourusername" class="social-btn" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:aya.a@example.com" class="social-btn">
-                            <i class="far fa-envelope"></i>
-                        </a>
-                    </div>
+            <div class="contact-content">
+                <p class="welcome-text">
+                    Je suis ouverte à toute opportunité de travail ou collaboration dans le domaine du développement web et mobile. 
+                    Que vous ayez un projet en tête, une question ou simplement envie de discuter de technologies, n'hésitez pas à me contacter. 
+                    Je suis toujours intéressée par de nouveaux défis et collaborations enrichissantes.
+                </p>
+                
+                <div class="cv-download">
+                    <a href="doc/AATFAOUI_AYA .pdf" class="btn">
+                        <i class="fas fa-download"></i> Télécharger mon CV
+                    </a>
                 </div>
                 
-                <div class="contact-actions">
-                    <h3 class="action-title">Télécharger mon CV</h3>
-                    <p>Vous pouvez télécharger une version PDF de mon curriculum vitae pour en savoir plus sur mon parcours et mes compétences.</p>
-                    <a href="#" class="btn">
-                        <i class="fas fa-download"></i> Télécharger le CV
+                <div class="social-buttons">
+                    <a href="www.linkedin.com/in/aatfaoui-aya-99a605259" class="social-btn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
-                    
-                    <h3 class="action-title">Me contacter directement</h3>
-                    <p>N'hésitez pas à me contacter par email ou via les réseaux sociaux pour toute question ou opportunité de collaboration.</p>
-                    <a href="mailto:aya.a@example.com" class="btn">
-                        <i class="far fa-envelope"></i> Envoyer un email
+                    <a href="https://github.com/aya20053" class="social-btn" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:ayaaatfaoui38@example.com" class="social-btn">
+                        <i class="far fa-envelope"></i>
                     </a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <script>
-        // Script pour le téléchargement du CV (simulé)
-        document.querySelector('a[href="#"]').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Téléchargement du CV simulé. En production, liez ce bouton à l\'URL réelle de votre CV.');
-        });
-    </script>
-
-    <!-- Footer -->
-    <footer>
+          <footer>
         <div class="container">
-            <p>&copy; 2023 Aya Aatfaoui. Tous droits réservés.</p>
+            <p id="copy">&copy;2024-2025 Aatfaoui Aya</p>
         </div>
     </footer>
+    </section>
+
+   
+   
 </body>
 </html>
