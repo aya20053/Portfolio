@@ -1,0 +1,836 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+::selection{
+    background:#142c48;
+    color:lemonchiffon;
+}
+
+/* Navigation */
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    margin:10px;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #142c48;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    text-shadow: 2px 2px 5px #acc9ea; /* Ajoute un ombrage */
+}
+
+
+
+.nav-item.active {
+    text-shadow: 2px 2px 5px rgb(172, 201, 234.3); /* Ajoute un ombrage */
+    transition: box-shadow 0.3s ease;
+}
+
+
+.logo {
+    width: 50px; /* Ajuste la taille selon tes préférences */
+    height: 50px; /* Assure-toi que la hauteur soit la même que la largeur */
+    border-radius: 50%; /* Crée un effet de cercle */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
+}
+
+
+
+/* Sections */
+section {
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    min-height: 100vh; /* Prend toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    
+}
+/*acceuil*/
+#about {
+    position: relative;
+    height: 100vh; /* La section "About" prendra 100% de la hauteur de l'écran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Assurer que tout débordement est caché */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Vidéo en arrière-plan */
+    overflow: hidden;
+
+  
+
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* La vidéo couvrira toute la section "About" */
+
+}
+
+
+
+#content {
+    position: relative;
+    z-index: 2; /* Placer le contenu au-dessus de la vidéo */
+    color: white;
+    text-align: center;
+  
+}
+
+
+
+#about h1 {
+    font-family: 'Dancing Script', cursive; /* Appliquer la police cursive */
+    font-size: 7rem; /* Taille du texte pour le titre principal */
+    font-weight: bold; /* Rendre le texte en gras */
+    margin-bottom: 20px; /* Espacement sous le titre principal */
+    font-optical-sizing: auto;
+    margin-top: 190px;
+    z-index: 2; /* Placer le texte au-dessus de l'arrière-plan flou */
+color: #acc9ea;
+}
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    zoom:100%;
+    transform: translate(-50%, -50%);
+    filter: blur(10px); /* Adjust the blur radius as needed */
+
+
+}/* Animation de la machine à écrire */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Appliquer l'animation à l'élément avec la classe typing */
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: monospace;
+    animation: typing 4s steps(40, end), blink 0.5s step-end infinite;
+    display: inline-block;
+    width: 100%; /* Ajuste selon la longueur du texte */
+}
+
+
+#about p {
+    font-size: 1.2em; /* Taille du texte pour le paragraphe */
+    max-width: 600px; /* Largeur maximum du paragraphe */
+    margin: 0 auto; /* Centrer le paragraphe */
+    line-height: 1.5; /* Espacement entre les lignes */
+    color: #acc9ea;
+}
+
+/*formation*/
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.diploma {
+    opacity: 0;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.diploma.fade-in {
+    animation-name: fadeIn;
+}
+
+
+
+
+#formation {
+    padding: 80px ; /* Espacement autour du contenu */
+    text-align: center; /* Centrer le texte */
+}
+
+
+.diplomas {
+    display: flex; /* Affichage en flex pour aligner les cartes */
+    justify-content: center; /* Centrer les cartes horizontalement */
+    flex-wrap: wrap; /* Permettre le passage à la ligne des cartes */
+    gap: 40px; /* Espacement entre les cartes */
+   
+}
+
+.diploma {
+    background: #d6e2ef; /* Couleur de fond blanche */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 40px; /* Espacement interne */
+    max-width: 300px; /* Largeur maximum pour chaque carte */
+}
+
+.diploma:hover {
+
+    transform: scaleY(1); /* Affiche le trait à gauche et à droite */
+
+}
+
+
+.diploma i {
+    font-size: 3em; /* Taille de l'icône */
+    color: #1c3f66; /* Couleur de l'icône */
+    margin-bottom: 10px; /* Espacement sous l'icône */
+}
+
+.diploma h3 {
+    font-size: 1.5em; /* Taille du titre du diplôme */
+    margin-bottom: 10px; /* Espacement sous le titre */
+    color: #333; /* Couleur du titre */
+}
+
+.diploma p {
+    font-size: 1em; /* Taille du texte pour le paragraphe */
+    color: #111010; /* Couleur du texte */
+    line-height: 1.5; /* Espacement entre les lignes */
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+
+
+/* Trait en haut */
+.diploma::before,
+.diploma::after {
+    content: "";
+    position: absolute;
+    background-color: #1c3f66; /* Couleur des traits */
+    transition: all 0.3s ease;
+}
+
+/* Trait en haut */
+.diploma::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Épaisseur du trait */
+    transform: scaleX(0); /* Invisible par défaut */
+}
+
+/* Trait à gauche */
+.diploma::after {
+    top: 0;
+    left: 0;
+    width: 2px; /* Épaisseur du trait */
+    height: 100%;
+    transform: scaleY(0); /* Invisible par défaut */
+}
+
+
+
+/* Affichage des traits lors du survol */
+.diploma:hover::before,
+.diploma:hover::after {
+    transform: scaleX(1); /* Affiche le trait en haut et en bas */
+}
+
+.diploma:hover::after {
+    transform: scaleY(1); /* Affiche le trait à gauche et à droite */
+}
+
+/*competances*/
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.skill {
+    opacity: 0;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.skill.fade-in {
+    animation-name: fadeIn;
+}
+
+#competence {
+    padding: 80px ; /* Espacement autour du contenu */
+    text-align: center; /* Centrer le texte */
+   
+}
+
+
+
+.skills-container {
+    display: flex; /* Utiliser flexbox pour l'alignement */
+    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    gap: 20px;
+
+}
+.skill {
+    width: 180px; /* Augmenter la largeur pour chaque compétence */
+    height: 140px; /* Augmenter la hauteur pour chaque compétence */
+    display: flex; /* Utiliser flexbox pour centrer le contenu */
+    flex-direction: column; /* Orienter le contenu en colonne */
+    align-items: center; /* Centrer horizontalement */
+    justify-content: center; /* Centrer verticalement */
+    margin: 10px; /* Espacement autour de chaque compétence */
+    border: 1px solid #ccc; /* Optionnel : bordure pour délimiter les compétences */
+    border-radius: 8px; /* Optionnel : arrondir les coins */
+    background: #d6e2ef; /* Couleur de fond blanche */
+    transition: all 0.3s ease; /* Transition pour le survol */
+    margin-left: 30px;
+}
+
+
+.skill i {
+    font-size: 2.5em; /* Augmenter la taille des icônes */
+    color: #1c3f66; /* Changez cette couleur selon vos préférences */
+
+}
+.skill {
+    position: relative; /* Nécessaire pour le positionnement absolu du trait */
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease; /* Transition pour le survol */
+}
+.logo_skill {
+    width: 50px; /* Ajuste la taille selon tes préférences */
+    height: 50px; /* Assure-toi que la hauteur soit la même que la largeur */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
+}
+
+
+.skills-group-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.skills-group h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+/* Trait en haut */
+.skill::before,
+.skill::after {
+    content: "";
+    position: absolute;
+    background-color: #333; /* Couleur des traits */
+    transition: all 0.3s ease;
+}
+
+/* Trait en haut */
+.skill::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Épaisseur du trait */
+    transform: scaleX(0); /* Invisible par défaut */
+}
+
+/* Trait à gauche */
+.skill::after {
+    top: 0;
+    left: 0;
+    width: 2px; /* Épaisseur du trait */
+    height: 100%;
+    transform: scaleY(0); /* Invisible par défaut */
+}
+
+
+
+
+/* Affichage des traits lors du survol */
+.skill:hover::before,
+.skill:hover::after {
+    transform: scaleX(1); /* Affiche le trait en haut */
+}
+
+.skill:hover::after {
+    transform: scaleY(1); /* Affiche le trait à gauche  */
+}
+
+
+/* Experience */
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.project-card {
+    opacity: 0;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.project-card.fade-in {
+    animation-name: fadeIn;
+}
+
+#projects { 
+    padding: 80px ; /* Espacement autour du contenu */
+    text-align: center; /* Centrer le texte */
+}
+
+
+
+
+/* Conteneur pour chaque section (expérience professionnelle et académique) */
+.experience-section {
+    margin-bottom: 20px; /* Espacement entre chaque section */
+    display: flex; /* Utiliser flexbox pour centrer le contenu */
+    flex-direction: column; /* Aligner les éléments en colonne */
+    align-items: center; /* Centrer horizontalement */
+    justify-content: center; /* Centrer verticalement */
+    text-align: center; /* Centrer le texte */
+}
+
+/* Utiliser flexbox pour aligner les cartes sur la même ligne */
+.projects-row {
+    display: flex; /* Aligner les cartes côte à côte */
+    justify-content: space-between; /* Espace entre les cartes */
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne si nécessaire */
+    gap: 20px; /* Espacement entre les cartes */
+}
+
+/* Carte de chaque projet */
+.project-card {
+    width: 100%; /* Chaque carte prend toute la largeur disponible */
+    max-width: 400px; /* Limiter la largeur maximale des cartes */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #d6e2ef;
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+    text-align: center; /* Centre le texte à l'intérieur de la carte */
+}
+
+/* Icônes des projets */
+.project-logo {
+    font-size: 2.5em;
+    color: #1c3f66;
+    display: block; /* Permet de centrer l'icône en tant que bloc */
+    margin: 0 auto; /* Centre l'icône horizontalement */
+    justify-content: center; /* Centre l'icône horizontalement */
+    margin-bottom: 10px; /* Espacement sous l'icône */
+}
+.experience-type{
+font-weight: bold;
+}
+
+/* Effet de survol avec trait */
+.project-card::before,
+.project-card::after {
+    content: "";
+    position: absolute;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.project-card::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+}
+
+.project-card::after {
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+.project-card:hover::after {
+    transform: scaleY(1);
+}
+
+
+.project-details a {
+    text-decoration: none;
+    color: #024069;
+    font-weight: bold;
+}
+.project-details a:hover {
+    text-decoration: underline;
+}
+/* Conteneur pour chaque section */
+.projects-row {
+    display: grid; /* Utiliser une grille pour organiser les cartes */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste le nombre de colonnes en fonction de la largeur disponible */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-items: center; /* Centre les cartes horizontalement */
+}
+
+/* Carte de chaque projet */
+.project-card {
+    width: 100%; /* Chaque carte prend toute la largeur disponible */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #d6e2ef;
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+    text-align: center;
+    position: relative;
+}
+
+/* Effet de zoom sur la carte au survol */
+.project-card:hover {
+    transform: scale(1.05); /* Agrandit légèrement la carte au survol */
+}
+
+/* Icônes des projets */
+.project-logo {
+    font-size: 3em;
+    color: #1c3f66;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Détails du projet */
+.project-details h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+
+
+.experience-section {
+    margin-bottom: 20px; /* Espacement entre chaque section */
+    display: flex; /* Utiliser flexbox pour centrer le contenu */
+    flex-direction: column; /* Aligner les éléments en colonne */
+    align-items: center; /* Centrer horizontalement */
+}
+
+/* Utiliser flexbox pour aligner les cartes sur la même ligne */
+.projects-row {
+    display: grid; /* Utiliser une grille pour organiser les cartes */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste le nombre de colonnes */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-items: center; /* Centre les cartes horizontalement */
+}
+
+/* Carte de chaque projet */
+.project-card {
+    width: 100%; /* Chaque carte prend toute la largeur disponible */
+    max-width: 400px; /* Limiter la largeur maximale des cartes */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #d6e2ef;
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+    text-align: center;
+    position: relative;
+}
+
+
+
+/*contact*/
+#contact {
+    padding: 80px ; /* Espacement autour du contenu */
+    text-align: center; /* Centrer le texte */
+}
+#con{
+    margin-top: 30px;
+}
+ 
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Taille du cercle */
+    height:60px; /* Taille du cercle */
+    border-radius: 50%;
+    border: 3px solid ; /* Bordure initiale */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 2.5em; /* Taille de l'icône */
+  }
+  
+  .icon-box.email {
+    border-color: red;
+    color: RED;
+  }
+  
+  .icon-box.linkedin {
+    border-color: blue;
+    color: blue;
+  }
+  
+  .icon-box.github {
+    border-color: black;
+    color: black;
+  }
+  
+  
+  
+  .icon-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  #copy {
+    text-align: center;
+    margin-top: auto;
+    padding: 10px;
+    color:rgb(28, 63, 102);
+    width: 100%;
+}
+.btn-cv {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 10px 20px;
+    border: 1px solid #08366b;
+    color: #08366b;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition pour la couleur du texte et le fond */
+}
+
+.btn-cv:hover {
+    background-color: #08366b; /* Couleur de fond au survol */
+    color: antiquewhite; /* Couleur de texte au survol */
+    transition: 1s ease-in-out;
+}
+
+
+
+
+
+.styled-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d6e2ef;
+    text-align: center;
+    padding: 10px 20px;
+    border: 2px solid #1c3f66;
+    background: #1c3f66;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+
+
+/* sur le telephonne */
+
+@media (max-width: 768px) {
+    #about {
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    
+
+    #content {
+        margin-top:30px; /* Adjust for smaller screens */
+    }
+
+    #about h1 {
+        font-size: 2.3rem; /* Smaller font size for mobile */
+        margin-bottom: 10px;
+    }
+
+    #about p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+  .video-background video {
+        height: 100%; /* Garde la hauteur à 100% */
+        width: auto; /* Laisse la largeur s'ajuster automatiquement */
+        max-width: 50%; /* Limiter la largeur à 80% de l'écran (ajustez selon vos besoins) */
+        left: 50%; /* Centrer horizontalement */
+        transform: translate(-50%, -50%); /* Ajustement du centrage */
+    }
+}
+  
+@media (max-width: 768px) {
+    #formation {
+        padding:  10px; /* Adjust padding for mobile */
+    }
+
+    
+
+    .diplomas {
+        flex-direction: column; /* Stack cards vertically on mobile */
+        align-items: center; /* Center align cards on mobile */
+    }
+
+    .diploma {
+        max-width: 90%; /* Make cards take up more screen width on mobile */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    .diploma h3 {
+        font-size: 1.2em; /* Adjust title size for mobile */
+        margin-bottom: 10px; /* Adjust spacing for mobile */
+    }
+
+    .diploma p {
+        font-size: 0.9em; /* Adjust text size for mobile */
+    }
+}
+
+
+@media (max-width: 768px) {
+    #competence {
+        padding: 10px;
+    }
+
+    .styled-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .skills-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .skill {
+        width: 140px;
+        height: 140px;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+      
+        border-radius: 12px;
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill i, .skill img {
+        font-size: 2em;
+        margin-bottom: 8px;
+    }
+
+    .skill img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-row {
+        flex-direction: column; /* Affiche les cartes en colonne */
+    }
+    .project-card {
+        width: 100%; /* Make skills take up full width on mobile */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+    .project-logo {
+        font-size: 24px; /* Réduit la taille des icônes */
+    }
+    #projects {
+        padding: 20px; /* Adjust padding for mobile */
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+    #contact {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        padding: 0 10px; /* Adjust lateral padding for mobile */
+    }
+
+    #con {
+        margin-top: 20px; /* Adjust top margin for mobile */
+    }
+
+   
+
+   
+    .icons {
+        gap: 20px; /* Adjust gap for mobile */
+    }
+
+    .icon-box {
+        width: 50px; /* Adjust size for mobile */
+        height: 50px; /* Adjust size for mobile */
+        font-size: 2em; /* Adjust icon size for mobile */
+    }
+
+    #copy {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .btn-cv {
+        padding: 8px 16px; /* Adjust button padding for mobile */
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+    
+}
+
+
+
+
+/*   new*/
+
